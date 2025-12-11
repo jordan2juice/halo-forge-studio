@@ -1,213 +1,129 @@
-"use client";
-
-import Link from "next/link";
+// app/work/page.tsx
 import Image from "next/image";
-import { easeInOut, motion } from "motion/react";
-import { Church, GraduationCap, Coffee } from "lucide-react";
-
-const projects = [
-  {
-    label: "Parish Website · Studio Project",
-    name: "St. Raphael Parish",
-    type: " Parish",
-    result: "+300% online giving after redesign",
-    summary:
-      "New site structure, clearer giving pathways, and MAss times that are easy to find on mobile.",
-    href: "/work/st-raphael-parish",
-    imageSrc: "/images/st-raphael-parish.png",
-    imageAlt:
-      "Screenshot of the St. Raphael Parish website designed by Halo Forge Studio",
-    Icon: Church,
-  },
-  {
-    label: "Catholic Academy · Studio Project",
-    name: "Regina Caeli Academy",
-    type: "Academy",
-    result: "More inquiries from prospective families",
-    summary:
-      "A refreshed visual identity and focused enrollment page that help parents understand the school within seconds.",
-    href: "/work/regina-caeli-academy",
-    imageSrc: "/images/regina-caeli-academy.png",
-    imageAlt:
-      "Screenshot of the Regina Caeli Academy website designed by Halo Forge Studio",
-    Icon: GraduationCap,
-  },
-  {
-    label: "Catholic-Owned Business · Studio Project",
-    name: "Sacred Grounds Coffee",
-    type: "Business",
-    result: "Increase in online orders",
-    summary:
-      "Warm, faith-rooted branding and a simplified checkout flow that invite customers to order again and again.",
-    href: "/work/sacred-grounds-coffee",
-    imageSrc: "/images/sacred-grounds-coffee.png",
-    imageAlt:
-      "Screenshot of the Sacred Grounds Coffee website designed by Halo Forge Studio",
-    Icon: Coffee,
-  },
-];
-
-const container = {
-  hidden: { opacity: 0, y: 24 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-      ease: easeInOut,
-      when: "beforeChildren",
-      staggerChildren: 0.08,
-    },
-  },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 16 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-};
-
-import React from "react";
+import Link from "next/link";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 
-export default function page() {
-  return (
-    <main className="bg-base-light text-base-dark">
-      <Navbar />
-      <section className="border-b border-base-dark/10 bg-base-light py-16">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8"
-        >
-          <motion.p
-            variants={item}
-            className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-accent-gold"
-          >
-            Work
-          </motion.p>
-          <motion.h1
-            variants={item}
-            className="saint-serif mt-3 text-3xl md:text-34xl font-semibold "
-          >
-            Selected Catholic projects from Halo Forge Studio.
-          </motion.h1>
-          <motion.p
-            className="saint-sans mt-3 text-sm md:text-base text-base-dark/80"
-            variants={item}
-          >
-            A curated look at how this one‑person Catholic brand &amp; web
-            studio supports parishes, ministries, schools, and Catholic‑owned
-            businesses with branding and websites that serve real people.
-          </motion.p>
-          <motion.p
-            className="saint-sans mt-3 text-xs text-base-dark/60"
-            variants={item}
-          >
-            Some projects may begin as personal or concept work and are labeled
-            clearly. As the studio grows, this page will evolve with new case
-            studies and results.
-          </motion.p>
-        </motion.div>
-      </section>
+const projects = [
+  {
+    slug: "st-gabriel-parish",
+    name: "St. Gabriel Parish",
+    type: "Ministry",
+    role: "Website redesign",
+    blurb:
+      "A calmer, donation‑friendly parish site centered on Mass times, sacraments, and upcoming events.",
+    image: "/images/st-gabriel.png",
+  },
+  {
+    slug: "cedar-and-cross-books",
+    name: "Cedar & Cross Books",
+    type: "Retail",
+    role: "Brand + ecommerce visuals",
+    blurb:
+      "A warm, bookshop‑inspired identity and storefront for a Catholic retailer moving online.",
+    image: "/images/cedar-cross-books.png",
+  },
+  {
+    slug: "sanctum-counseling",
+    name: "Sanctum Counseling",
+    type: "Professional services",
+    role: "Brand + website launch",
+    blurb:
+      "A grounded, trustworthy brand and site for a Catholic counseling practice serving families.",
+    image: "/images/sanctum-counceling.png",
+  },
+  {
+    slug: "holy-family-school",
+    name: "Holy Family Catholic School",
+    type: "Ministry",
+    role: "Enrollment-focused website",
+    blurb:
+      "A refreshed school website that highlights academics, faith life, and simple next steps for parents.",
+    image: "/images/holy-family.png",
+  },
+];
 
-      {/* Projects grid */}
-      <section className="py-14">
-        <motion.div
-          variants={container}
-          initial="hidden"
-          animate="visible"
-          whileInView={"visible"}
-          viewport={{ once: true, amount: 0.25 }}
-          className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
-        >
-          <motion.div
-            variants={item}
-            className="flex items-center justify-between gap-4"
-          >
-            <h2 className="saint-serif text-xl md:text-text-2xl font-semibold text-base-dark">
-              Studio Projects
-            </h2>
-            <div className="hidden gap-2 text-xs saint-sans text-base-dark/70 md:flex">
-              <span className="rounded-full border border-base-dark/10 px-3 py-1">
-                Parishes
-              </span>
-              <span className="rounded-full border border-base-dark/10 px-3 py-1">
-                Schools
-              </span>
-              <span className="rounded-full border border-base-dark/10 px-3 py-1">
-                Catholic Businesses
-              </span>
-            </div>
-          </motion.div>
-          <div className="mt-8 grid gap-6 md;grid-cols-3">
-            {projects.map(({ Icon, ...project }) => (
-              <motion.article
-                key={project.name}
-                variants={item}
-                whileHover={{
-                  y: -6,
-                  scale: 1.02,
-                  boxShadow: "0 18px 40px rgba(15, 23, 42, 0.18)",
-                }}
-                className="card flex h-full flex-col overflow-hidden border border-base-dark/10 bg-base-light/80"
-                transition={{ type: "spring", stiffness: 260, damping: 22 }}
+export default function WorkPage() {
+  return (
+    <>
+      <Navbar />
+      <main className="mx-auto max-w-5xl space-y-12 px-4 py-16 sm:px-6 lg:px-0">
+        {/* Hero */}
+        <section className="space-y-4">
+          <p className="saint-sans text-xs font-semibold uppercase tracking-[0.18em] text-halo-dusk/70">
+            Case study previews
+          </p>
+          <h1 className="saint-serif text-3xl font-semibold text-halo-dusk">
+            Brand and web projects for Catholic missions and businesses.
+          </h1>
+          <p className="saint-sans max-w-2xl text-sm text-halo-dusk/80">
+            A selection of studio projects across ministries, retail, and
+            professional services. Each case study walks through the brief, the
+            design decisions, and the results.
+          </p>
+        </section>
+
+        {/* Filters (visual only for now) */}
+        <section className="flex flex-wrap gap-2">
+          {["All", "Retail", "Ministries", "Professional services"].map(
+            (label) => (
+              <button
+                key={label}
+                type="button"
+                className="saint-sans inline-flex items-center rounded-full border border-halo-border-subtle bg-halo-offwhite px-3 py-1.5 text-[11px] font-medium text-halo-dusk/80 transition-colors hover:border-accent-gold hover:text-halo-dusk"
               >
-                <div className="relative h-40 w-full overflow-hidden">
-                  <Image
-                    src={project.imageSrc}
-                    alt={project.imageAlt}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="flex flex-1 flex-col p-4">
-                  <div className="flex- items-center gap-2">
-                    <Icon
-                      className="h-4 w-4 text-accent-gold"
-                      aria-hidden="true"
-                    />
+                {label}
+              </button>
+            )
+          )}
+        </section>
+
+        {/* Grid of case study previews */}
+        <section className="grid gap-6 md:grid-cols-2">
+          {projects.map((project) => (
+            <Link
+              key={project.slug}
+              href={`/work/${project.slug}`}
+              className="group flex flex-col overflow-hidden rounded-2xl border border-halo-border-subtle bg-halo-offwhite/90 shadow-soft/40 transition hover:-translate-y-0.5 hover:border-accent-gold hover:shadow-soft"
+            >
+              {/* Image */}
+              <div className="relative h-40 w-full overflow-hidden bg-halo-linen">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  fill
+                  className="object-cover transition duration-300 group-hover:scale-105"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="flex flex-1 flex-col justify-between gap-4 p-5">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2">
+                    <span className="saint-sans inline-flex items-center rounded-full bg-halo-linen/90 px-2.5 py-1 text-[11px] font-medium uppercase tracking-[0.16em] text-halo-dusk/80">
+                      {project.type}
+                    </span>
+                    <span className="saint-sans text-[11px] text-halo-dusk/60">
+                      {project.role}
+                    </span>
                   </div>
-                  <p className="saint-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-base-dark/70">
-                    {project.label}
+                  <h2 className="saint-serif text-lg font-semibold text-halo-dusk">
+                    {project.name}
+                  </h2>
+                  <p className="saint-sans text-xs text-halo-dusk/80">
+                    {project.blurb}
                   </p>
                 </div>
-                <h3 className="saint-serif mt-2 text-lg font-semibold text-base-dark">
-                  {project.name}
-                </h3>
-                <p className="saint-sans mt-2 text-xs font-semibold text-accent-gold">
-                  {project.result}
+
+                <p className="saint-sans text-[11px] font-semibold text-accent-teal">
+                  View full case study →
                 </p>
-                <p className="saint-sans mt-2 text-xs text-base-dark/80">
-                  {project.summary}
-                </p>
-                <div className="mt-4">
-                  <Link
-                    href={project.href}
-                    className="saint-sans inline-flex text-xs font-semibold uppercase tracking-[0.16em] text-accent-gold underline-offset-4 hover:text-accent-gold/90 hover:underline"
-                  >
-                    View full case study
-                  </Link>
-                </div>
-              </motion.article>
-            ))}
-          </div>
-          <motion.div className="mt-10 text-center" variants={item}>
-            <p className="saint-sans text-sm text-base-dark/90">
-              Have a Catholic project in mind and want to see if it fits this
-              kind of work?
-            </p>
-            <Link
-              href={"./contact"}
-              className="mt-3 inline-flex items-center rounded-full bg-accent-gold px-6 py-2 text-xs font-semibold text-base-dark shadow-md shadow-accent-gold/40 uppercase tracking-[0.16em] hover:bg-accent-gold/85"
-            >
-              Start a project conversation
+              </div>
             </Link>
-          </motion.div>
-        </motion.div>
-      </section>
+          ))}
+        </section>
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }

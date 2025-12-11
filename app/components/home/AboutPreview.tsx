@@ -70,7 +70,7 @@ export default function AboutPreview() {
             <li className="flex items-start gap-2">
               <HeartHandshake className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                • Catholic‑first: I understand liturgical seasons, parish life,
+                Catholic‑first: I understand liturgical seasons, parish life,
                 and Catholic audiences.
               </span>
             </li>

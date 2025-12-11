@@ -62,7 +62,7 @@ export default function ServicesPreview() {
           <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-halo-gold">
             Studio services
           </p>
-          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-dusk">
+          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-teal">
             Ways this studio can help your mission or business.
           </h2>
           <p className="saint sans mt-3 text-sm md:text-base text-halo-dusk/80">
@@ -93,7 +93,7 @@ export default function ServicesPreview() {
               </p>
               <Link
                 href={service.href}
-                className="saint-sans mt-4 inline-flex text-xs font-semibold uppercase tracking-[.16em] text-halo-dusk/80 underline-offset-4 hover:text-halo-dusk whover:underline"
+                className="saint-sans mt-4 inline-flex text-xs font-semibold uppercase tracking-[.16em] text-halo-dusk/80 underline-offset-4 hover:text-halo-dusk hover:underline whover:underline"
               >
                 View service details
               </Link>

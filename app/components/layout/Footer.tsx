@@ -14,13 +14,13 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-halo-border-subtle bg-halo-dusk/95 text-halo-offwhite">
+    <footer className="border-t border-halo-border-subtle bg-halo-dusk/95 ">
       <div className="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 lg:flex-row lg:items-start lg:justify-between">
         {/* Left: logo + summary */}
         <div className="space-y-3 max-w-sm">
           <Link href="/" className="flex items-center gap-2">
             <Image src={Logo} alt="Halo Forge Studio" width={40} height={40} />
-            <span className="saint-serif text-sm font-semibold">
+            <span className="saint-serif text-sm font-semibold text-halo-linen">
               Halo Forge Studio
             </span>
           </Link>
@@ -41,7 +41,7 @@ export default function Footer() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="hover:text-accent-gold transition-colors"
+                  className="hover:text-halo-gold transition-colors"
                 >
                   {link.label}
                 </Link>
