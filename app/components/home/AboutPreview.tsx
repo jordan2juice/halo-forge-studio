@@ -27,7 +27,7 @@ const item = {
 
 export default function AboutPreview() {
   return (
-    <section className="bg-base-light py-16">
+    <section className="bg-halo-offwhite py-16">
       <motion.div
         className="mx-auto flex max-w-7xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8"
         initial="hidden"
@@ -37,12 +37,12 @@ export default function AboutPreview() {
       >
         {/* Left: portrait or studio image */}
         <motion.div
-          className="relative h-56 w-56 self-center overflow-hidden rounded-full border border-base-dark/10 bg-base-light shadow-lg shadow-base-dark/20 lg:h-64 lg:w-64"
+          className="relative h-56 w-56 self-center overflow-hidden rounded-full border border-halo-dusk/10 bg-halo-linen shadow-lg shadow-halo-dusk/20 lg:h-64 lg:w-64"
           variants={item}
         >
           <Image
             src="/images/profile-pic (1).jpg" // update path
-            alt="[Your Name], designer & developer behind Halo Forge Studio"
+            alt="Jordan Toujouse, designer & developer behind Halo Forge Studio"
             fill
             className="object-cover"
           />
@@ -50,39 +50,39 @@ export default function AboutPreview() {
 
         {/* Right: studio copy */}
         <motion.div className="max-w-xl" variants={item}>
-          <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-accent-gold">
+          <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-halo-gold">
             Studio
           </p>
-          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-base-dark">
+          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-dusk">
             A one‑person Catholic brand &amp; web studio you can email directly.
           </h2>
-          <p className="saint-sans mt-3 text-sm md:text-base text-base-dark/80">
+          <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
             Halo Forge Studio is my solo Catholic design and web studio.
-            I&apos;m [Your Name], the designer and front‑end developer behind
-            it. I help parishes, ministries, schools, and Catholic‑owned
+            I&apos;m Jordan Toujouse, the designer and front‑end developer
+            behind it. I help parishes, ministries, schools, and Catholic‑owned
             businesses look and feel as thoughtful online as they are in person.
           </p>
 
           <h3 className="saint-serif mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-base-dark/80">
             How the studio works
           </h3>
-          <ul className="saint-sans mt-3 space-y-2 text-sm text-base-dark/80">
+          <ul className="saint-sans mt-3 space-y-2 text-sm text-halo-dusk/80">
             <li className="flex items-start gap-2">
-              <HeartHandshake className="mt-[2px] h-4 w-4 text-accent-gold" />
+              <HeartHandshake className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
                 • Catholic‑first: I understand liturgical seasons, parish life,
                 and Catholic audiences.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <Sparkles className="mt-[2px] h-4 w-4 text-accent-gold" />
+              <Sparkles className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
                 Studio‑level craft: Branding, UI, and code handled together for
                 a cohesive result.
               </span>
             </li>
             <li className="flex items-start gap-2">
-              <Globe2 className="mt-[2px] h-4 w-4 text-accent-gold" />
+              <Globe2 className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
                 Clear process: One point of contact from first email through
                 launch and beyond.
@@ -93,13 +93,13 @@ export default function AboutPreview() {
           <div className="mt-5 flex flex-wrap items-center gap-3">
             <Link
               href="/about"
-              className="saint-sans inline-flex items-center text-sm font-semibold text-accent-gold underline-offset-4 hover:text-accent-gold/90 hover:underline"
+              className="saint-sans inline-flex items-center text-sm font-semibold text-halo-gold underline-offset-4 hover:text-halo-gold/90 hover:underline"
             >
               Read more about the studio
             </Link>
             <Link
               href="/contact"
-              className="saint-sans inline-flex items-center rounded-full bg-accent-gold px-4 py-2 text-xs font-semibold text-base-dark shadow-md shadow-accent-gold/40 uppercase tracking-[0.16em] hover:bg-accent-gold/85"
+              className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-4 py-2 text-xs font-semibold text-halo-dusk shadow-md shadow-halo-gold/40 uppercase tracking-[0.16em] hover:bg-halo-gold/85"
             >
               Book a call
             </Link>

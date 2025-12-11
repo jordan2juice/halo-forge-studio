@@ -22,7 +22,7 @@ const item = {
 
 export default function TrustPreview() {
   return (
-    <section className="bg-base-dark py-16">
+    <section className="bg-halo-dusk py-16">
       <motion.div
         variants={container}
         initial="hidden"
@@ -31,13 +31,13 @@ export default function TrustPreview() {
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
       >
         <motion.div variants={item} className="max-w-3xl">
-          <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-accent-gold">
+          <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-halo-gold">
             Working Together
           </p>
-          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-base-light">
+          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-teal">
             I&apos;m new as a studio, not new to design and code.
           </h2>
-          <p className="saint-sans mt-3 text-sm md:text-base text-base-light/80">
+          <p className="saint-sans mt-3 text-sm md:text-base text-halo-offwhite/80">
             Halo Forge Studio is my solo practice, but I bring years of graphic
             design and front‑end development experience, plus a deep commitment
             to serving the Church. Here&apos;s what you can expect working with
@@ -46,7 +46,7 @@ export default function TrustPreview() {
         </motion.div>
         <div className="mt-8 grid gap-6 md:grid-col-3">
           <motion.div
-            className="card border border-base-light/15, bg-base-light/5, text-base-light "
+            className="card border border-halo-linen/80 p-4 rounded-3xl bg-halo-linen/25 text-halo-linen"
             variants={item}
             whileHover={{
               y: -4,
@@ -55,20 +55,17 @@ export default function TrustPreview() {
             }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
           >
-            <PhoneCall
-              className="h-6 w-6 text-accent-gold"
-              aria-hidden="true"
-            />
-            <p className="saint-serif text-sm font-semibold text-base-dark">
+            <PhoneCall className="h-6 w-6 text-halo-gold" aria-hidden="true" />
+            <p className="saint-serif text-sm font-semibold mt-2 text-halo-linen">
               1. Clear foundations
             </p>
-            <p className="saint-sans mt-2 text-sm text-base-dark/80">
+            <p className="saint-sans mt-6 flex text-sm text-base-dark/80">
               We start with a call to understand your mission, audience, and
               priorities—then I outline a simple plan in plain language.
             </p>
           </motion.div>
           <motion.div
-            className="card border border-base-dark/10 bg-base-light"
+            className="card border border-halo-linen/80 p-4 rounded-3xl bg-halo-linen/25 "
             variants={item}
             whileHover={{
               y: -4,
@@ -78,20 +75,20 @@ export default function TrustPreview() {
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
           >
             <PencilRuler
-              className="h-6 w-6 text-accent-gold"
+              className="h-6 w-6 text-halo-gold"
               aria-hidden="true"
             />
-            <p className="saint-serif text-sm font-semibold text-base-dark">
+            <p className="saint-serif text-sm font-semibold text-halo-linen">
               2. Design &amp; build
             </p>
-            <p className="saint-sans mt-2 text-sm text-base-dark/80">
+            <p className="saint-sans mt-2 text-sm text-halo-linen/80">
               I handle the branding and website work, sharing key checkpoints so
               you can review copy, layouts, and visuals without getting lost in
               tech.
             </p>
           </motion.div>
           <motion.div
-            className="card border border-base-dark/10 bg-base-light"
+            className="card border border-halo-linen/80 p-4 rounded-3xl bg-halo-linen/25"
             variants={item}
             whileHover={{
               y: -4,
@@ -100,12 +97,12 @@ export default function TrustPreview() {
             }}
             transition={{ type: "spring", stiffness: 260, damping: 22 }}
           >
-            <Rocket className="h-6 w-6 text-accent-gold" aria-hidden="true" />
+            <Rocket className="h-6 w-6 text-halo-gold" aria-hidden="true" />
 
-            <p className="saint-serif text-sm font-semibold text-base-dark">
+            <p className="saint-serif text-sm font-semibold text-halo-linen">
               3. Launch &amp; support
             </p>
-            <p className="saint-sans mt-2 text-sm text-base-dark/80">
+            <p className="saint-sans mt-2 text-sm text-halo-linen/80">
               I launch your site, walk you through the essentials, and offer
               ongoing support options so you&apos;re not left on your own
               afterward.
