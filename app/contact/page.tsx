@@ -1,80 +1,11 @@
 // app/contact/page.tsx
-"use client";
-
-import { useState, useMemo } from "react";
-import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 import Link from "next/link";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import ContactForm from "../components/contact/ContactForm";
 
-const SERVICE_OPTIONS = [
-  { value: "brand-web-launch", label: "Brand & Website Launch" },
-  { value: "website-refresh", label: "Website Refresh" },
-  { value: "ongoing-support", label: "Ongoing Design & Web Support" },
-  { value: "brand-identity", label: "Package · Brand Identity" },
-  { value: "website-design", label: "Package · Website Design & Development" },
-  {
-    value: "complete-brand-website",
-    label: "Package · Complete Brand + Website",
-  },
-  { value: "not-sure", label: "I’m not sure yet" },
-];
-
 export default function ContactPage() {
-  const searchParams = useSearchParams();
-  const initialServiceFromQuery = searchParams.get("service") || "";
-
-  const initialService = useMemo(() => {
-    if (!initialServiceFromQuery) return "not-sure";
-    const match = SERVICE_OPTIONS.find(
-      (option) => option.value === initialServiceFromQuery
-    );
-    return match ? match.value : "not-sure";
-  }, [initialServiceFromQuery]);
-
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    organization: "",
-    website: "",
-    service: initialService,
-    budget: "",
-    message: "",
-  });
-
-  const selectedServiceLabel =
-    SERVICE_OPTIONS.find((option) => option.value === formData.service)
-      ?.label ?? null;
-
-  function handleChange(
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
-  ) {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  }
-
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    fetch("/", {
-      method: "POST",
-      body: data,
-    })
-      .then(() => {
-        // e.g., show success state or redirect
-        console.log("Form successfully submitted");
-      })
-      .catch((error) => {
-        console.error("Form submission error", error);
-      });
-  }
-
   return (
     <>
       <Navbar />
@@ -108,21 +39,11 @@ export default function ContactPage() {
           </p>
         </header>
 
-        {/* Selected service pill */}
-        {selectedServiceLabel &&
-          selectedServiceLabel !== "I&apos;m not sure yet" && (
-            <div className="rounded-full border border-halo-gold/40 bg-halo-gold/10 px-4 py-2">
-              <p className="saint-sans text-[11px] text-halo-dusk/80">
-                You&apos;re interested in:{" "}
-                <span className="font-semibold">{selectedServiceLabel}</span>.
-                If this isn&apos;t quite right, feel free to adjust the
-                selection below or explain more in your message.
-              </p>
-            </div>
-          )}
+        {/* Client-side form that uses useSearchParams, wrapped in Suspense */}
+        <Suspense fallback={null}>
+          <ContactForm />
+        </Suspense>
 
-        {/* Form */}
-        <ContactForm />
         {/* Small note back to services */}
         <p className="saint-sans text-[11px] text-halo-dusk/70">
           Not sure which option fits? You can{" "}

@@ -9,7 +9,8 @@ import {
 } from "lucide-react";
 import React from "react";
 import { useState } from "react";
-import { connection } from "next/server";
+import { useSearchParams } from "next/navigation";
+import { useMemo } from "react";
 
 const SERVICE_OPTIONS = [
   { value: "brand-web-launch", label: "Brand & Website Launch" },
@@ -21,7 +22,7 @@ const SERVICE_OPTIONS = [
     value: "complete-brand-website",
     label: "Package · Complete Brand + Website",
   },
-  { value: "not-sure", label: "I’m not sure yet" },
+  { value: "not-sure", label: "I&apos;m not sure yet" },
 ];
 
 const BUDGET_OPTIONS = [
@@ -33,17 +34,36 @@ const BUDGET_OPTIONS = [
 ];
 
 export default function ContactForm() {
-  // Rest of your code...
+  const searchParams = useSearchParams();
+  const initialServiceFromQuery = searchParams.get("service") || "";
+
+  const initialService = useMemo(() => {
+    if (!initialServiceFromQuery) return "not-sure";
+    const match = SERVICE_OPTIONS.find(
+      (option) => option.value === initialServiceFromQuery
+    );
+    return match ? match.value : "not-sure";
+  }, [initialServiceFromQuery]);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     organization: "",
     website: "",
-    service: "",
+    service: initialService,
     budget: "",
     message: "",
   });
+
+  function handleChange(
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+    >
+  ) {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  }
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -62,19 +82,6 @@ export default function ContactForm() {
         console.error("Form submission error", error);
       });
   }
-
-  function handleChange(
-    e: React.ChangeEvent<
-      | HTMLAnchorElement
-      | HTMLInputElement
-      | HTMLSelectElement
-      | HTMLTextAreaElement
-    >
-  ) {
-    const { name, value } = e.target as HTMLInputElement | HTMLTextAreaElement;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  }
-
   return (
     <section className="bg-halo-offwhite  rounded-2xl border p-6 border-halo-border-strong ">
       <form
