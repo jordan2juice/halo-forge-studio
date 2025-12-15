@@ -3,15 +3,13 @@
 import {
   BriefcaseIcon,
   Building,
-  Link,
   LinkIcon,
-  Mail,
   MailIcon,
   User,
 } from "lucide-react";
-import { useSearchParams } from "next/navigation";
-import React, { useMemo } from "react";
+import React from "react";
 import { useState } from "react";
+import { connection } from "next/server";
 
 const SERVICE_OPTIONS = [
   { value: "brand-web-launch", label: "Brand & Website Launch" },
@@ -34,23 +32,18 @@ const BUDGET_OPTIONS = [
   { value: "5000-plus", label: "$5,000+" },
 ];
 
-export default function ContactForm() {
-  const searchParams = useSearchParams();
-  const initialServiceFromQuery = searchParams.get("service") || "";
-  const initialService = useMemo(() => {
-    if (!initialServiceFromQuery) return "not-sure";
-    const match = SERVICE_OPTIONS.find(
-      (option: any) => option.value === initialServiceFromQuery
-    );
-    return match ? match.value : "not-sure";
-  }, [initialServiceFromQuery]);
+export default async function ContactForm() {
+  await connection();
+  // Rest of your code...
+}
+ 
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     organization: "",
     website: "",
-    service: initialService,
+    service: "",
     budget: "",
     message: "",
   });
