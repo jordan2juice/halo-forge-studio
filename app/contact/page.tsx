@@ -27,10 +27,10 @@ export default function ContactPage() {
           <p className="saint-sans text-xs text-halo-dusk/70">
             Prefer email? Reach out directly at{" "}
             <a
-              href="mailto:hello@haloforge.studio"
+              href="mailto:jwtoujouse@gmail.com"
               className="underline underline-offset-2 hover:text-halo-teal"
             >
-              hello@haloforge.studio
+              jwtoujouse@gmail.com
             </a>
             .
           </p>
