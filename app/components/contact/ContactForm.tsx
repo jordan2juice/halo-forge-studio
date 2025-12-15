@@ -32,11 +32,8 @@ const BUDGET_OPTIONS = [
   { value: "5000-plus", label: "$5,000+" },
 ];
 
-export default async function ContactForm() {
-  await connection();
+export default function ContactForm() {
   // Rest of your code...
-}
- 
 
   const [formData, setFormData] = useState({
     name: "",
