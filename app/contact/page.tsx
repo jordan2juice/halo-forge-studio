@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
+import ContactForm from "../components/contact/ContactForm";
 
 const SERVICE_OPTIONS = [
   { value: "brand-web-launch", label: "Brand & Website Launch" },
@@ -18,14 +19,6 @@ const SERVICE_OPTIONS = [
     label: "Package · Complete Brand + Website",
   },
   { value: "not-sure", label: "I’m not sure yet" },
-];
-
-const BUDGET_OPTIONS = [
-  { value: "", label: "Select a range" },
-  { value: "under-1500", label: "Under $1,500" },
-  { value: "1500-3000", label: "$1,500–$3,000" },
-  { value: "3000-5000", label: "$3,000–$5,000" },
-  { value: "5000-plus", label: "$5,000+" },
 ];
 
 export default function ContactPage() {
@@ -129,180 +122,7 @@ export default function ContactPage() {
           )}
 
         {/* Form */}
-        <section className="rounded-2xl border border-halo-border-subtle bg-halo-offwhite/90 p-6 shadow-soft">
-          <form
-            name="contact"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            onSubmit={handleSubmit}
-            className="space-y-5"
-          >
-            {/* Name and email */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="name"
-                  className="saint-sans text-xs font-semibold text-halo-dusk"
-                >
-                  Name
-                </label>
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-halo-gold focus:shadow-soft"
-                />
-              </div>
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="email"
-                  className="saint-sans text-xs font-semibold text-halo-dusk"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-halo-gold focus:shadow-soft"
-                />
-              </div>
-            </div>
-
-            {/* Organization and website */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="organization"
-                  className="saint-sans text-xs font-semibold text-halo-dusk"
-                >
-                  Organization
-                  <span className="font-normal text-halo-dusk/60">
-                    {" "}
-                    (optional)
-                  </span>
-                </label>
-                <input
-                  id="organization"
-                  name="organization"
-                  type="text"
-                  value={formData.organization}
-                  onChange={handleChange}
-                  className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-halo-gold focus:shadow-soft"
-                />
-              </div>
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="website"
-                  className="saint-sans text-xs font-semibold text-halo-dusk"
-                >
-                  Website
-                  <span className="font-normal text-halo-dusk/60">
-                    {" "}
-                    (optional)
-                  </span>
-                </label>
-                <input
-                  id="website"
-                  name="website"
-                  type="url"
-                  placeholder="https://"
-                  value={formData.website}
-                  onChange={handleChange}
-                  className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-halo-gold focus:shadow-soft"
-                />
-              </div>
-            </div>
-
-            {/* Service and budget */}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="service"
-                  className="saint-sans text-xs font-semibold text-halo-dusk"
-                >
-                  What are you interested in?
-                </label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-accent-gold focus:shadow-soft"
-                >
-                  {SERVICE_OPTIONS.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div className="space-y-1.5">
-                <label
-                  htmlFor="budget"
-                  className="saint-sans text-xs font-semibold text-halo-dusk"
-                >
-                  Approximate budget
-                </label>
-                <select
-                  id="budget"
-                  name="budget"
-                  value={formData.budget}
-                  onChange={handleChange}
-                  className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-halo-gold focus:shadow-soft"
-                >
-                  {BUDGET_OPTIONS.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Message */}
-            <div className="space-y-1.5">
-              <label
-                htmlFor="message"
-                className="saint-sans text-xs font-semibold text-halo-dusk"
-              >
-                Tell a bit about your project
-              </label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                rows={5}
-                value={formData.message}
-                onChange={handleChange}
-                className="saint-sans w-full rounded-lg border border-halo-border-subtle bg-white px-3 py-2 text-xs text-halo-dusk shadow-soft/20 outline-none ring-0 transition focus:border-halo-gold focus:shadow-soft"
-                placeholder="Where are you today, and what would a successful brand or website change for you?"
-              />
-            </div>
-
-            {/* Footer text and submit */}
-            <div className="flex flex-col items-start justify-between gap-3 border-t border-halo-border-subtle pt-4 text-left sm:flex-row sm:items-center">
-              <p className="saint-sans text-[11px] text-halo-dusk/70">
-                By submitting, you&apos;re not committing to a project. This is
-                simply a starting point for a conversation.
-              </p>
-              <button
-                type="submit"
-                className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft transition hover:bg-halo-gold-deep"
-              >
-                Send message
-              </button>
-            </div>
-          </form>
-        </section>
-
+        <ContactForm />
         {/* Small note back to services */}
         <p className="saint-sans text-[11px] text-halo-dusk/70">
           Not sure which option fits? You can{" "}
