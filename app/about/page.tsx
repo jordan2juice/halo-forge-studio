@@ -1,7 +1,5 @@
 // app/about/page.tsx
 
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
