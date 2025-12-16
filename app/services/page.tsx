@@ -121,7 +121,7 @@ const packages = [
     title: "Package 3 · Complete Brand + Website",
     price: "$4,800–$7,500",
     timeline:
-      "6–8 weeks → 6–8 weeks to launch a polished, mission-aligned brand & website",
+      "6–8 weeks to launch a polished, mission-aligned brand & website",
     bestFor:
       "New Catholic businesses launching or established organizations doing a complete transformation.",
     features: [
@@ -130,8 +130,8 @@ const packages = [
       "Brand application mockups (business cards, letterhead, collateral)",
       "Seamless integration of brand across key touchpoints",
       "A cohesive visual system ready to launch",
-      "Custom logo design \u2192 Custom logo design that communicates your Catholic mission instantly",
-      "Responsive development \u2192 Responsive, mobile-friendly development to engage all visitors",
+      "Custom logo design that communicates your Catholic mission instantly",
+      "Responsive, mobile-friendly development to engage all visitors",
     ],
     featured: true,
     savings:
