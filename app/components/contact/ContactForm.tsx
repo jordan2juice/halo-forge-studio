@@ -22,7 +22,7 @@ const SERVICE_OPTIONS = [
     value: "complete-brand-website",
     label: "Package · Complete Brand + Website",
   },
-  { value: "not-sure", label: "I&apos;m not sure yet" },
+  { value: "not-sure", label: "I'm not sure yet" },
 ];
 
 const BUDGET_OPTIONS = [
