@@ -7,6 +7,14 @@ import Image from "next/image";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import { Hammer, Layers, Sparkles, UserCheck } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Halo Forge Studio – Catholic branding & web design",
+  description:
+    "Learn about Halo Forge Studio, a small Catholic design and development studio helping parishes, ministries, and Catholic-owned businesses with branding and websites.",
+};
+
 // If you use an icon set like Lucide:
 // import { Hammer, Sparkles, Layers, UserCheck } from "lucide-react";
 
@@ -21,9 +29,10 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="saint-serif mt-3 text-3xl md:text-4xl font-semibold text-halo-dusk">
-            Halo Forge Studio is a small Catholic design & dev studio crafted
-            for mission.
+            About Halo Forge Studio, a small Catholic design & dev studio for
+            mission.
           </h1>
+
           <p className="saint-sans text-halo-dusk/80 mt-4 max-w-2xl text-sm md:text-base text-muted">
             Branding and web for parishes, ministries, and Catholic-owned
             businesses who want work that feels modern, reverent, and genuinely

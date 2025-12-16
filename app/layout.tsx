@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Halo Forge Studio",
-  description: "Forging light into lasting design.",
+  title: "Halo Forge Studio – Catholic branding & web design",
+  description:
+    "Halo Forge Studio designs and builds Catholic brands and websites for parishes, ministries, and faith-based businesses.",
 };
 
 export default function RootLayout({

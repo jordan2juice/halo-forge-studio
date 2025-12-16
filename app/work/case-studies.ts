@@ -17,6 +17,7 @@ export type CaseStudy = {
   outcome: string;
   tags: string[];
   images?: CaseStudyImage[];
+  sector?: string;
 };
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -33,7 +34,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Halo Forge Studio restructured the site around the core tasks parishioners actually come to the site for: Mass and confession times, sacraments, events, and giving. A simplified navigation, clear calls to action, and a calmer visual system made it easier to scan on mobile and desktop. Key sections like Mass times and directions moved to the homepage, while sacraments and ministries received dedicated, scannable pages.",
     outcome:
       "The new website gives St. Gabriel a welcoming, mission‑aligned online presence that feels consistent with the parish’s liturgical life. Parishioners can now find Mass times, sacraments, and contact information within a couple of clicks, reducing repeat questions to the office and making it easier for newcomers to take their next step into parish life.",
-    tags: ["Website redesign", "UX & UI", "Catholic parish"],
+    sector: "Catholic Parish",
+    tags: ["Website redesign", "Navigation", "Giving", "Sacraments", "Events"],
     images: [
       {
         src: "/images/case-studies/st-gabriel/stg-desktop.png",
@@ -61,7 +63,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "Starting with brand foundations, a new logo, color palette, and type system were created to reflect the shop’s Marian devotion and handcrafted quality. The ecommerce site was then rebuilt around those visuals, reorganizing the catalog into clear categories like everyday rosaries, sacrament gifts, and custom commissions with filters for material, color, and price, plus trust‑building content such as a rosary buying guide, care instructions, and craftsmanship details.",
     outcome:
       "The refreshed brand and website now present Little Crown Rosaries as a focused, trustworthy Catholic maker rather than just another generic shop. Visitors can quickly narrow in on the right rosary, understand the story and durability behind each piece, and move from browsing to purchase with less friction, supporting stronger online sales and fewer pre‑purchase questions.",
-    tags: ["Brand identity", "E‑commerce", "UX & UI", "Catholic retail"],
+    tags: ["Brand identity", "E‑commerce", "Shop", "Rosaries", "Sacramentals"],
+    sector: "Catholic Retail",
     images: [
       {
         src: "/images/case-studies/little-crown/lcr-brand.png",
@@ -88,7 +91,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "The homepage was reframed around a simple “Who we serve, What we offer, How to join” structure with clearer language and calls to action. Navigation was simplified into a few main paths for parishes, individuals, and supporters, and new content blocks highlighted signature retreats, testimonies, and ways to partner with the ministry.",
     outcome:
       "The redesigned site gives seekers and parish partners a much clearer path into the ministry, with improved visibility for events and programs and content that better reflects Emmaus Outreach’s Catholic identity and mission‑driven work.",
-    tags: ["Nonprofit", "Catholic ministry", "Website redesign"],
+    tags: ["Nonprofit", "Retreats", "Small groups", "Resources"],
+    sector: "Catholic Ministry",
     images: [
       {
         src: "/images/case-studies/emmaus-outreach/eom-homepage.png",
@@ -124,7 +128,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "A calm, uncluttered layout was designed that leads with client concerns and outcomes first, with gentle, opt‑in language about how faith can be integrated into therapy. Service pages and specialties were clarified, location‑specific SEO content was added, and a simple intake flow was created that guides visitors toward a single, focused contact form.",
     outcome:
       "Prospective clients now understand who the practice serves, what issues it specializes in, and how faith can be incorporated if desired, resulting in more qualified inquiries and a site that feels both clinically credible and quietly rooted in Christian hope.",
-    tags: ["Professional services", "Counseling", "Faith-informed"],
+    tags: ["Web design", "Catholic counseling", "Faith-informed"],
+    sector: "Therapy Practices",
     images: [
       {
         src: "/images/case-studies/hope-harbor/hh-homepage.png",
@@ -159,7 +164,8 @@ export const CASE_STUDIES: CaseStudy[] = [
       "A coherent visual identity was developed around the imagery of carved wood and the cross, pairing a refined wordmark with a warm, restrained color palette and simple typographic system. The ecommerce experience was rebuilt to highlight curated collections such as sacrament gifts, home altars, and seasonal devotionals, with filters for price, recipient, and feast, plus storytelling blocks that explain the mission and feature Catholic makers.",
     outcome:
       "The new Cedar & Cross brand and website present the shop as a focused, mission‑driven destination for Catholic gifts rather than a generic marketplace. Shoppers can browse by occasion, devotion, or collection, understand the spiritual meaning behind products, and complete purchases more easily on mobile and desktop, supporting stronger repeat business and collaboration with featured makers.",
-    tags: ["Brand identity", "E‑commerce", "UX & UI", "Catholic retail"],
+    tags: ["Brand identity", "E‑commerce", "Catholic gift shop"],
+    sector: "Catholic Retail",
     images: [
       {
         src: "/images/case-studies/cedar-cross/cc-homepage.png",
@@ -194,7 +200,13 @@ export const CASE_STUDIES: CaseStudy[] = [
       "The site was reorganized around three primary paths—individual retreats, parish/group retreats, and clergy days—each with clear descriptions, pricing, and FAQs. A calm, image-light layout using your Halo Forge dusk, gold, and linen palette makes key information easy to scan, while an availability calendar and simple inquiry form reduce back-and-forth emails.",
     outcome:
       "Retreatants can now discern the right offering at a glance, parishes can quickly get answers about group logistics, and the staff spends less time answering basic questions. The center presents a welcoming, trustworthy digital front door that matches the quiet, prayerful experience on the grounds.",
-    tags: ["Retreat center", "UX & UI", "Catholic nonprofit"],
+    tags: [
+      "Retreat website",
+      "Spiritual retreat",
+      "Parish ministry",
+      "Catholic retreat center",
+    ],
+    sector: "Catholic Retreat Center",
     images: [
       {
         src: "/images/case-studies/holy-mountain/hm-homepage.png",

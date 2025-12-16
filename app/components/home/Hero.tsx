@@ -61,7 +61,7 @@ export default function Hero() {
           >
             Design rooted in faith,
             <span className="block text-halo-teal">
-              crafted to grow Catholic missions and businesses.
+              crafted to grow Catholic businesses and business owners.
             </span>
           </motion.h1>
 
@@ -69,10 +69,9 @@ export default function Hero() {
             className="saint-sans mt-4 text-sm text-halo-offwhite/80 md:text-base"
             variants={item}
           >
-            Halo Forge Studio is a one‑person Catholic brand and web studio,
-            designing brands and websites that increase giving, inquiries, and
-            sales—so parishes, ministries, schools, and Catholic‑owned
-            businesses can focus on their mission, not their tech.
+            Design rooted in faith, crafted to grow Catholic missions and
+            Catholic-owned businesses—so parish leaders and business owners can
+            focus on their work, not their tech.{" "}
           </motion.p>
 
           <motion.div

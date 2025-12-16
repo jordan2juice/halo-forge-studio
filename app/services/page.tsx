@@ -1,18 +1,16 @@
 // app/services/page.tsx
-"use client";
 
 import Link from "next/link";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import {
-  Palette,
-  RefreshCcw,
-  LifeBuoy,
-  PenTool,
-  Globe2,
-  Sparkles,
-  PlusCircle,
-} from "lucide-react";
+import { Palette, RefreshCcw, LifeBuoy } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Services & Packages – Halo Forge Studio",
+  description:
+    "Branding, website design, and ongoing support for Catholic businesses, parishes, ministries, and professional practices.",
+};
 
 const services = [
   {
@@ -170,9 +168,10 @@ export default function ServicesPage() {
             Your brand and website should reflect the excellence and
             authenticity of the work you do. Whether you are launching a new
             ministry, growing a professional practice, or running a Catholic
-            retail business, Halo Forge helps you communicate your mission with
-            clarity and impact.
+            retail business, Halo Forge helps Catholic business owners and
+            ministry leaders communicate their mission with clarity and impact.
           </p>
+
           <p className="saint-sans text-xs text-halo-dusk/70">
             Explore{" "}
             <a
@@ -207,7 +206,9 @@ export default function ServicesPage() {
             </h2>
             <p className="saint-sans text-xs text-halo-dusk/80">
               Three main service paths tailored to Catholic retailers,
-              ministries, and professional practices.
+              ministries, and professional practices, so you can choose the
+              option that fits where your shop, practice, or parish is right
+              now.
             </p>
           </div>
 

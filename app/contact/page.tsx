@@ -4,6 +4,13 @@ import Link from "next/link";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import ContactForm from "../components/contact/ContactForm";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Halo Forge Studio – Catholic branding & websites",
+  description:
+    "Contact Halo Forge Studio to start a Catholic branding or website project for your business, parish, ministry, school, or counseling practice.",
+};
 
 export default function ContactPage() {
   return (
@@ -22,8 +29,10 @@ export default function ContactPage() {
           <p className="saint-sans max-w-2xl text-sm text-halo-dusk/80">
             Halo Forge partners with Catholic retailers, ministries, and
             professional practices on thoughtful brand and web design. Share a
-            bit about where you are today and what you hope to build.
+            bit about where you are today and what you hope to build as a
+            Catholic business owner or ministry leader.
           </p>
+
           <p className="saint-sans text-xs text-halo-dusk/70">
             Prefer email? Reach out directly at{" "}
             <a
