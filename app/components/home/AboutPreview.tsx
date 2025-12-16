@@ -54,13 +54,16 @@ export default function AboutPreview() {
             Studio
           </p>
           <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-dusk">
-            A one‑person Catholic brand &amp; web studio you can email directly.
+            A one-person Catholic brand & web studio behind real parish and
+            ministry work.
           </h2>
           <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
             Halo Forge Studio is my solo Catholic design and web studio.
-            I&apos;m Jordan Toujouse, the designer and front‑end developer
-            behind it. I help parishes, ministries, schools, and Catholic‑owned
-            businesses look and feel as thoughtful online as they are in person.
+            I&apos;m Jordan Toujouse, the designer and front-end developer
+            behind it. I partner with parishes, ministries, retreat centers, and
+            Catholic-owned businesses to create websites and brands that are
+            clear, welcoming, and rooted in their mission — not generic
+            templates or trends.
           </p>
 
           <h3 className="saint-serif mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-base-dark/80">
@@ -70,22 +73,23 @@ export default function AboutPreview() {
             <li className="flex items-start gap-2">
               <HeartHandshake className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                Catholic‑first: I understand liturgical seasons, parish life,
-                and Catholic audiences.
+                Catholic-first: I understand parish life, liturgical seasons,
+                and how real Catholic audiences look for information online.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <Sparkles className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                Studio‑level craft: Branding, UI, and code handled together for
-                a cohesive result.
+                Studio-level craft: Strategy, design, and front-end development
+                handled together so structure, visuals, and code all support the
+                same goals.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <Globe2 className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                Clear process: One point of contact from first email through
-                launch and beyond.
+                Clear process: One point of contact, clear next steps, and a
+                focus on reducing confusion for both staff and visitors.
               </span>
             </li>
           </ul>

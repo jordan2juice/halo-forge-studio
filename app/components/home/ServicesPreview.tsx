@@ -9,21 +9,21 @@ const services = [
   {
     title: "Brand + Website Launch",
     description:
-      "Start from a clean slate. I design your Catholic brand identity and build a custom website that match from day one.",
+      "Starting from scratch? I create a cohesive Catholic brand and a custom website that clearly communicates your mission, builds trust, and helps visitors take action from day one.",
     href: "/services#website-launch",
     Icon: LayoutTemplate,
   },
   {
     title: "Website Refresh & Redesign",
     description:
-      "Already have a site, but it feels dated or unclear? I restructure pages, refine the design, and make it easier for people to find what they need and take action.",
+      "If your website feels dated or confusing, I restructure pages, refine the design, and improve clarity—so people can quickly find what they need and engage with confidence.",
     href: "/services#website-redesign",
     Icon: RefreshCw,
   },
   {
     title: "Catholic Brand Identity",
     description:
-      "Logo, colors, and typography rooted in the faith and tailored to your mission. I create a simple brand system you can use everywhere—from your website to print.",
+      "Logos, colors, and typography designed with reverence and intention. I build a simple, faithful brand system you can use consistently—from your website to print materials.",
     href: "/services#branding",
     Icon: Palette,
   },
@@ -63,15 +63,16 @@ export default function ServicesPreview() {
             Studio services
           </p>
           <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-teal">
-            Ways this studio can help your mission or business.
+            Ways this studio supports your mission and work.
           </h2>
-          <p className="saint sans mt-3 text-sm md:text-base text-halo-dusk/80">
-            Every project starts with a conversation about your goals. Then I
-            recommend the level of branding and web support that fits your
-            parish, ministry, school, or Catholic‑owned business.
+          <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
+            Every project begins with a conversation about your goals. From
+            there, I recommend the right level of branding and web support for
+            your parish, ministry, school, or Catholic-owned business.
           </p>
         </motion.div>
-        <div className="mt-8 grid gap-3 md: grid-cols-3">
+
+        <div className="mt-8 grid gap-3 md:grid-cols-3">
           {services.map(({ Icon, ...service }) => (
             <motion.div
               key={service.title}
@@ -84,7 +85,7 @@ export default function ServicesPreview() {
               }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
             >
-              <Icon className="w-5 h-5  text-halo-gold" aria-hidden="true" />
+              <Icon className="w-5 h-5 text-halo-gold" aria-hidden="true" />
               <h3 className="saint-serif text-lg font-semibold text-halo-dusk">
                 {service.title}
               </h3>
@@ -93,7 +94,7 @@ export default function ServicesPreview() {
               </p>
               <Link
                 href={service.href}
-                className="saint-sans mt-4 inline-flex text-xs font-semibold uppercase tracking-[.16em] text-halo-dusk/80 underline-offset-4 hover:text-halo-dusk hover:underline whover:underline"
+                className="saint-sans mt-4 inline-flex text-xs font-semibold uppercase tracking-[.16em] text-halo-dusk/80 underline-offset-4 hover:text-halo-dusk hover:underline"
               >
                 View service details
               </Link>

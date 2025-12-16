@@ -29,13 +29,13 @@ export default function FinalCta() {
         </div>
 
         <h2 className="saint-serif mt-4 text-2xl md:text-3xl font-semibold text-halo-dusk">
-          Ready to talk about your Catholic project?
+          Ready to bring your Catholic project online?{" "}
         </h2>
         <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
-          We&apos;ll spend 20–30 minutes clarifying your goals, audience, and
-          next steps. No pressure, no jargon—just an honest conversation about
-          whether Halo Forge Studio is a good fit for your parish, ministry,
-          school, or Catholic‑owned business.
+          In a 20–30 minute conversation, we&apos;ll clarify your goals,
+          audience, and next steps. No jargon, no pressure—just a clear
+          discussion about how Halo Forge Studio can help your parish, ministry,
+          school, or Catholic-owned business communicate effectively online.
         </p>
 
         <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">

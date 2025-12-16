@@ -18,51 +18,63 @@ const services = [
     name: "Brand & Website Launch",
     tag: "Signature service",
     icon: Palette,
-    pricing: "Most full brand + website projects invest between $4,800–$7,500.",
+    pricing:
+      "Most full brand + website projects invest $4,800–$7,500 — a one-time investment in a professional, Catholic-conscious brand that drives results.",
     bestFor: [
-      "New Catholic retailers and shops",
-      "Emerging ministries and apostolates",
-      "Professional practices launching or rebranding",
+      "New Catholic retailers and shops ready to launch a cohesive brand.",
+      "Emerging ministries or apostolates needing clarity and impact online.",
+      "Professional practices rebranding or launching with confidence.",
     ],
     outcomes: [
-      "A clear, Catholic-conscious visual identity that feels like you.",
-      "A streamlined website that makes the next step obvious.",
-      "Launch assets so you can share your new brand with confidence.",
+      "A brand that immediately communicates your Catholic mission.",
+      "A website guiding visitors naturally toward giving, registering, or purchasing.",
+      "Launch assets so you can share your new identity confidently.",
     ],
+    caseStudy: { label: "St. Gabriel Parish", href: "/work/st-gabriel-parish" },
   },
   {
     id: "website-refresh",
     name: "Website Refresh",
     tag: "For existing sites",
     icon: RefreshCcw,
-    pricing: "Website refresh projects typically start around $3,000–$4,500.",
+    pricing:
+      "Website refresh projects start at $3,000–$4,500 — perfect for making your existing site work harder for your mission.",
     bestFor: [
-      "Parishes and ministries with dated, hard-to-update sites.",
-      "Schools with cluttered navigation and confusing enrollment paths.",
-      "Shops and practices whose sites no longer reflect their work.",
+      "Parishes and ministries ready to reduce repeated questions and make info easy to find.",
+      "Schools needing a clearer enrollment path and updated navigation.",
+      "Shops and practices whose websites no longer reflect the work or mission.",
     ],
     outcomes: [
       "A calmer, more intuitive structure for your content.",
-      "Updated visuals that better match your mission and audience.",
+      "Updated visuals aligned with your mission and audience.",
       "Improved calls-to-action for giving, inquiries, or bookings.",
     ],
+    caseStudy: {
+      label: "Emmaus Outreach Ministry",
+      href: "/work/emmaus-outreach-ministry",
+    },
   },
   {
     id: "ongoing-support",
     name: "Ongoing Design & Web Support",
     tag: "Retainer-style",
     icon: LifeBuoy,
-    pricing: "Ongoing support plans begin at $300–$600 per month.",
+    pricing:
+      "Ongoing support plans start at $300–$600/month — maintain a polished, up-to-date website without stress.",
     bestFor: [
       "Growing ministries that need recurring design help.",
       "Retailers with seasonal campaigns and product updates.",
-      "Practices that want a steady, familiar partner for web changes.",
+      "Practices wanting a steady, familiar partner for web changes.",
     ],
     outcomes: [
       "A consistent visual presence across your website and materials.",
       "Regular updates handled without you chasing freelancers.",
-      "Room to test and refine over time instead of one big launch.",
+      "Room to test, refine, and improve over time instead of one big launch.",
     ],
+    caseStudy: {
+      label: "Sacred Grounds Coffee",
+      href: "/work/sacred-grounds-coffee",
+    },
   },
 ];
 
@@ -75,7 +87,7 @@ const packages = [
     bestFor:
       "New Catholic businesses, ministries rebranding, or organizations with outdated visual identities.",
     features: [
-      "Discovery session to understand your mission, values, and audience",
+      "Discovery session to understand mission, values, and audience",
       "Custom logo design (primary + secondary marks)",
       "Color palette (3–5 colors)",
       "Typography selection (2–3 fonts)",
@@ -91,14 +103,14 @@ const packages = [
     price: "$3,000–$4,500",
     timeline: "4–6 weeks",
     bestFor:
-      "Catholic businesses and ministries with existing branding who need a professional online presence.",
+      "Catholic businesses and ministries with existing branding needing a professional online presence.",
     features: [
       "Discovery session",
       "Sitemap and wireframes",
-      "Custom website design (typically 5–8 pages)",
+      "Custom website design (5–8 pages)",
       "Responsive development (mobile-friendly)",
       "Basic SEO setup",
-      "Content integration (you provide content, it is designed and laid out)",
+      "Content integration (you provide content, we design & lay it out)",
       "One month post-launch support for minor fixes",
       "Training on how to make basic updates",
     ],
@@ -108,18 +120,22 @@ const packages = [
     id: "complete-brand-website",
     title: "Package 3 · Complete Brand + Website",
     price: "$4,800–$7,500",
-    timeline: "6–8 weeks",
+    timeline:
+      "6–8 weeks → 6–8 weeks to launch a polished, mission-aligned brand & website",
     bestFor:
-      "New Catholic businesses launching, or established organizations doing a complete transformation.",
+      "New Catholic businesses launching or established organizations doing a complete transformation.",
     features: [
       "Everything in Brand Identity package",
       "Everything in Website Design & Development package",
-      "Brand application mockups (business cards, letterhead, simple collateral)",
+      "Brand application mockups (business cards, letterhead, collateral)",
       "Seamless integration of brand across key touchpoints",
       "A cohesive visual system ready to launch",
+      "Custom logo design \u2192 Custom logo design that communicates your Catholic mission instantly",
+      "Responsive development \u2192 Responsive, mobile-friendly development to engage all visitors",
     ],
     featured: true,
-    savings: "Bundled savings compared to booking each service separately.",
+    savings:
+      "💰 Save $500–$1,000 vs. booking Brand and Website separately — your most popular choice.",
   },
 ];
 
@@ -128,13 +144,13 @@ const addons = [
     title: "E‑commerce setup",
     price: "$900–$1,800",
     description:
-      "Shopping cart, payment processing, product pages, and basic inventory guidance for your online store.",
+      "Turn your products into sales with a ready-to-go online store — cart, checkout, payment, and inventory guidance included.",
   },
   {
     title: "Content writing",
     price: "$120–$180/page",
     description:
-      "SEO‑informed, mission‑driven copy that connects with your audience and communicates your values.",
+      "SEO-informed, mission-driven copy that engages your audience and inspires action — perfect for sharing your mission online.",
   },
   {
     title: "Brand collateral",
@@ -146,7 +162,7 @@ const addons = [
     title: "Monthly support",
     price: "$300–$600/month",
     description:
-      "Ongoing website updates, content changes, technical support, and maintenance retainer.",
+      "Keep your website polished and current without lifting a finger — updates, fixes, and ongoing support handled for you.",
   },
 ];
 
@@ -162,36 +178,28 @@ export default function ServicesPage() {
             Services & packages
           </p>
           <h1 className="saint-serif text-3xl font-semibold text-halo-dusk">
-            Brand and web design that honors your mission.
+            Brand & web design that honors your mission
           </h1>
           <p className="saint-sans max-w-2xl text-sm text-halo-dusk/80">
-            Your brand and website should reflect the excellence and
-            authenticity of the work you do. Whether you are launching a new
-            ministry, growing a professional practice, or running a Catholic
-            retail business, Halo Forge helps Catholic business owners and
-            ministry leaders communicate their mission with clarity and impact.
+            Halo Forge Studio helps Catholic business owners and ministry
+            leaders communicate their mission clearly and authentically. From
+            brand identity to website launch, your online presence will match
+            the excellence of your work.
           </p>
-
           <p className="saint-sans text-xs text-halo-dusk/70">
             Explore{" "}
             <a
               href="#core-services"
-              className="underline underline-offset-2 hover:text-accent-gold-deep"
+              className="underline hover:text-accent-gold-deep"
             >
               core services
             </a>
             ,{" "}
-            <a
-              href="#packages"
-              className="underline underline-offset-2 hover:text-halo-gold-deep"
-            >
+            <a href="#packages" className="underline hover:text-halo-gold-deep">
               packages
             </a>{" "}
             and{" "}
-            <a
-              href="#addons"
-              className="underline underline-offset-2 hover:text-halo-gold-deep"
-            >
+            <a href="#addons" className="underline hover:text-halo-gold-deep">
               add‑ons
             </a>
             .
@@ -202,13 +210,12 @@ export default function ServicesPage() {
         <section id="core-services" className="space-y-6">
           <div className="space-y-1">
             <h2 className="saint-serif text-xl font-semibold text-halo-dusk">
-              Core ways to work together
+              Core Services Designed to Grow Your Parish, Ministry, or Catholic
+              Business
             </h2>
             <p className="saint-sans text-xs text-halo-dusk/80">
               Three main service paths tailored to Catholic retailers,
-              ministries, and professional practices, so you can choose the
-              option that fits where your shop, practice, or parish is right
-              now.
+              ministries, and professional practices.
             </p>
           </div>
 
@@ -256,7 +263,7 @@ export default function ServicesPage() {
                 <div className="flex flex-1 flex-col gap-4 md:max-w-sm">
                   <div className="space-y-1.5">
                     <p className="saint-sans text-xs font-semibold uppercase tracking-[0.18em] text-halo-dusk/60">
-                      What we’ll focus on
+                      What you’ll get
                     </p>
                     <ul className="saint-sans space-y-1 text-xs text-halo-dusk/80">
                       {service.outcomes.map((item) => (
@@ -268,16 +275,18 @@ export default function ServicesPage() {
                   <div className="flex flex-wrap gap-3">
                     <Link
                       href={`/contact?service=${service.id}`}
-                      className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft transition-colors hover:bg-halo-gold-deep"
+                      className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-5 py-2.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft hover:bg-halo-gold-deep transition"
                     >
-                      Start this project
+                      Book your launch call
                     </Link>
-                    <Link
-                      href="/work"
-                      className="saint-sans text-[11px] font-semibold text-halo-teal underline-offset-4 hover:underline"
-                    >
-                      See related case studies
-                    </Link>
+                    {service.caseStudy && (
+                      <Link
+                        href={service.caseStudy.href}
+                        className="saint-sans text-[11px] font-semibold text-halo-teal underline hover:underline"
+                      >
+                        See {service.caseStudy.label} results
+                      </Link>
+                    )}
                   </div>
                 </div>
               </article>
@@ -289,7 +298,7 @@ export default function ServicesPage() {
         <section id="packages" className="space-y-6">
           <div className="space-y-1">
             <h2 className="saint-serif text-xl font-semibold text-halo-dusk">
-              Packages & investment
+              Packages to Launch Your Brand & Website with Confidence
             </h2>
             <p className="saint-sans text-xs text-halo-dusk/80">
               These packages give a clear sense of typical investments. Your
@@ -302,7 +311,7 @@ export default function ServicesPage() {
               <article
                 key={pkg.id}
                 className={`flex flex-col gap-4 rounded-2xl border border-halo-border-subtle bg-halo-offwhite/90 p-5 shadow-soft/40 transition hover:-translate-y-0.5 hover:border-halo-gold hover:shadow-soft ${
-                  pkg.featured ? "ring-1 ring-halo-gold-deep" : ""
+                  pkg.featured ? "ring-2 ring-halo-gold-deep" : ""
                 }`}
               >
                 {pkg.featured && (
@@ -325,7 +334,7 @@ export default function ServicesPage() {
 
                 <div className="space-y-1.5">
                   <p className="saint-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-halo-dusk/60">
-                    What&apos;s included
+                    What’s included
                   </p>
                   <ul className="saint-sans space-y-1 text-xs text-halo-dusk/80">
                     {pkg.features.map((feature) => (
@@ -348,7 +357,7 @@ export default function ServicesPage() {
                 <div className="mt-auto">
                   <Link
                     href={`/contact?service=${pkg.id}`}
-                    className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft transition-colors hover:bg-halo-gold-deep"
+                    className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft hover:bg-halo-gold-deep transition"
                   >
                     Get started
                   </Link>
@@ -362,7 +371,7 @@ export default function ServicesPage() {
         <section id="addons" className="space-y-4">
           <div className="space-y-1">
             <h2 className="saint-serif text-xl font-semibold text-halo-dusk">
-              Add‑on services
+              Add‑on Services
             </h2>
             <p className="saint-sans text-xs text-halo-dusk/80">
               Add these to any package or scope them separately as needed.
@@ -392,20 +401,19 @@ export default function ServicesPage() {
             Not sure where to start?
           </h2>
           <p className="saint-sans mt-1 text-xs text-halo-dusk/80">
-            Share a bit about your ministry, shop, or practice—along with which
-            service or package you&apos;re considering—and a few thoughtful next
-            steps and a suggested starting point will be sent within 2–3
-            business days.
+            Tell us about your ministry, shop, or practice—and which package
+            you’re considering. Within 2–3 business days, we’ll send
+            personalized recommendations and clear next steps to get started
+            with confidence.
           </p>
           <Link
             href="/contact"
-            className="saint-sans mt-3 inline-flex items-center rounded-full bg-halo-gold px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft transition-colors hover:bg-halo-gold-deep"
+            className="saint-sans mt-3 inline-flex items-center rounded-full bg-halo-gold px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-soft hover:bg-halo-gold-deep transition"
           >
-            Schedule a discovery call
+            Get your personalized recommendation{" "}
           </Link>
         </section>
       </main>
-
       <Footer />
     </>
   );

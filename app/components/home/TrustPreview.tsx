@@ -35,13 +35,13 @@ export default function TrustPreview() {
             Working Together
           </p>
           <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-teal">
-            I&apos;m new as a studio, not new to design and code.
+            Years of design and code experience, focused on serving the Church.
           </h2>
           <p className="saint-sans mt-3 text-sm md:text-base text-halo-offwhite/80">
-            Halo Forge Studio is my solo practice, but I bring years of graphic
-            design and front‑end development experience, plus a deep commitment
-            to serving the Church. Here&apos;s what you can expect working with
-            me:
+            Halo Forge Studio is my one-person practice, but I bring extensive
+            experience in design, front-end development, and a deep commitment
+            to Catholic missions. Here’s what you can expect when we
+            collaborate:
           </p>
         </motion.div>
         <div className="mt-8 grid gap-6 md:grid-col-3">
@@ -60,8 +60,9 @@ export default function TrustPreview() {
               1. Clear foundations
             </p>
             <p className="saint-sans mt-6 flex text-sm text-base-dark/80">
-              We start with a call to understand your mission, audience, and
-              priorities—then I outline a simple plan in plain language.
+              We begin with a conversation about your mission, audience, and
+              priorities. From there, I create a simple plan that’s easy to
+              understand and follow.{" "}
             </p>
           </motion.div>
           <motion.div
@@ -82,9 +83,9 @@ export default function TrustPreview() {
               2. Design &amp; build
             </p>
             <p className="saint-sans mt-2 text-sm text-halo-linen/80">
-              I handle the branding and website work, sharing key checkpoints so
-              you can review copy, layouts, and visuals without getting lost in
-              tech.
+              I handle the branding and website development together, sharing
+              key checkpoints so you can review copy, layout, and visuals
+              without getting lost in tech details.{" "}
             </p>
           </motion.div>
           <motion.div
@@ -104,8 +105,7 @@ export default function TrustPreview() {
             </p>
             <p className="saint-sans mt-2 text-sm text-halo-linen/80">
               I launch your site, walk you through the essentials, and offer
-              ongoing support options so you&apos;re not left on your own
-              afterward.
+              ongoing support so you have clarity and confidence after launch.{" "}
             </p>
           </motion.div>
         </div>

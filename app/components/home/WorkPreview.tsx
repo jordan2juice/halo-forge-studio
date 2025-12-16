@@ -8,40 +8,40 @@ import { Church, GraduationCap, Coffee } from "lucide-react";
 
 const projects = [
   {
-    label: "Parish website · Studio project",
-    name: "St. Raphael Parish",
-    result: "+300% online giving after redesign",
+    label: "Catholic parish · Case study",
+    name: "St. Gabriel Catholic Parish",
+    result: "Clearer navigation and fewer repeat questions",
     description:
-      "Halo Forge Studio restructured the site, clarified giving pathways, and made Mass times easy to find on mobile.",
-    href: "/work/st-raphael-parish",
-    imageSrc: "/images/st-raphael-parish.png",
+      "A redesigned parish website that makes Mass times, sacraments, events, and contact information easy to find—helping parishioners and newcomers take their next step with confidence.",
+    href: "/work/st-gabriel-parish",
+    imageSrc: "/images/case-studies/st-gabriel/stg-desktop.png",
     imageAlt:
-      "Screenshot of the St. Raphael Parish website designed by Halo Forge Studio",
+      "St. Gabriel Catholic Parish website homepage redesigned by Halo Forge Studio",
     Icon: Church,
   },
   {
-    label: "Catholic academy · Studio project",
-    name: "Regina Caeli Academy",
-    result: "More inquiries from prospective families",
+    label: "Catholic retail · Case study",
+    name: "Little Crown Rosaries",
+    result: "Stronger brand clarity and smoother online sales",
     description:
-      "A refreshed visual identity and focused enrollment page that help parents understand the school within seconds.",
-    href: "/work/regina-caeli-academy",
-    imageSrc: "/images/regina-caeli-academy.png",
+      "A handcrafted Catholic brand and ecommerce experience that helps customers understand what makes each rosary distinct and purchase with confidence.",
+    href: "/work/little-crown-rosaries",
+    imageSrc: "/images/case-studies/little-crown/lcr-shop.png",
     imageAlt:
-      "Screenshot of the Regina Caeli Academy website designed by Halo Forge Studio",
-    Icon: GraduationCap,
+      "Little Crown Rosaries ecommerce website designed by Halo Forge Studio",
+    Icon: Coffee,
   },
   {
-    label: "Catholic-owned business · Studio project",
-    name: "Sacred Grounds Coffee",
-    result: "Increase in online orders",
+    label: "Catholic ministry · Case study",
+    name: "Emmaus Outreach Ministry",
+    result: "Clear paths for seekers, parishes, and supporters",
     description:
-      "Warm, faith‑rooted branding and a simplified checkout flow that invite customers to order again and again.",
-    href: "/work/sacred-grounds-coffee",
-    imageSrc: "/images/sacred-grounds-coffee.png",
+      "A restructured ministry website that clarifies who the ministry serves, what it offers, and how different audiences can get involved.",
+    href: "/work/emmaus-outreach-ministry",
+    imageSrc: "/images/case-studies/emmaus-outreach/eom-homepage.png",
     imageAlt:
-      "Screenshot of the Sacred Grounds Coffee website designed by Halo Forge Studio",
-    Icon: Coffee,
+      "Emmaus Outreach Ministry website homepage designed by Halo Forge Studio",
+    Icon: Church,
   },
 ];
 

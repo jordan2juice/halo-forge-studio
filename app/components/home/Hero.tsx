@@ -59,9 +59,9 @@ export default function Hero() {
             className="saint-serif mt-3 text-3xl font-semibold text-halo-linen md:text-4xl lg:text-5xl"
             variants={item}
           >
-            Design rooted in faith,
+            Websites &amp; brands
             <span className="block text-halo-teal">
-              crafted to grow Catholic businesses and business owners.
+              built to strengthen Catholic missions and businesses.
             </span>
           </motion.h1>
 
@@ -69,9 +69,9 @@ export default function Hero() {
             className="saint-sans mt-4 text-sm text-halo-offwhite/80 md:text-base"
             variants={item}
           >
-            Design rooted in faith, crafted to grow Catholic missions and
-            Catholic-owned businesses—so parish leaders and business owners can
-            focus on their work, not their tech.{" "}
+            I design modern, trustworthy websites and brands for Catholic
+            parishes, ministries, schools, and business owners—so you can focus
+            on serving your community, not managing technology.
           </motion.p>
 
           <motion.div
@@ -96,8 +96,8 @@ export default function Hero() {
             className="saint-sans text-xs text-halo-offwhite/65 mt-5 md:text-sm"
             variants={item}
           >
-            Best fit for Catholic retailers, parishes and ministries, and
-            professional practices.
+            Best fit for parishes, ministries, schools, and Catholic-owned
+            professional businesses.
           </motion.p>
         </motion.div>
 
@@ -110,11 +110,11 @@ export default function Hero() {
             Studio at a glance
           </p>
           <div className="saint-sans space-y-2 text-xs">
-            <p>• One‑person Catholic brand &amp; web studio.</p>
-            <p>• Branding, website launches, redesigns, and care plans.</p>
+            <p>• Independent Catholic brand &amp; web studio.</p>
+            <p>• Website launches, redesigns, branding, and care plans.</p>
             <p>
-              • Serving parishes, ministries, schools, and Catholic‑owned
-              businesses.
+              • Serving Catholic organizations and business owners across the
+              U.S.
             </p>
           </div>
         </motion.aside>
