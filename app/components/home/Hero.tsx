@@ -25,6 +25,18 @@ const item = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.45 } },
 };
 
+const services = [
+  { label: "Brand Identity" },
+  { label: "Web Design" },
+  { label: "Custom Software" },
+];
+
+const glanceItems = [
+  "Independent Catholic brand, web & software studio.",
+  "Brands, websites, custom CRMs, and web apps — built together.",
+  "Serving Catholic organizations and business owners across the U.S.",
+];
+
 export default function Hero() {
   return (
     <section className="relative w-full overflow-hidden bg-halo-dusk text-base-light">
@@ -59,21 +71,30 @@ export default function Hero() {
             className="saint-serif mt-3 text-3xl font-semibold text-halo-linen md:text-4xl lg:text-5xl"
             variants={item}
           >
-            Design rooted in faith,
-            <span className="block text-halo-teal">
-              crafted to grow Catholic missions and businesses.{" "}
-            </span>
+            Your mission deserves
+            <span className="block text-halo-teal">more than a template.</span>
           </motion.h1>
 
           <motion.p
             className="saint-sans mt-4 text-sm text-halo-offwhite/80 md:text-base"
             variants={item}
           >
-            Halo Forge Studio is a one‑person Catholic brand and web studio,
-            designing brands and websites that increase giving, inquiries, and
-            sales—so parishes, ministries, schools, and Catholic‑owned
-            businesses can focus on their mission, not their tech.{" "}
+            Halo Forge Studio builds brands, websites, and custom software for
+            Catholic organizations — so you can focus on spreading the faith,
+            not fighting your technology.
           </motion.p>
+
+          {/* Service pills */}
+          <motion.div className="mt-5 flex flex-wrap gap-2" variants={item}>
+            {services.map((s) => (
+              <span
+                key={s.label}
+                className="saint-sans inline-block rounded-full border border-halo-linen/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-halo-offwhite/70"
+              >
+                {s.label}
+              </span>
+            ))}
+          </motion.div>
 
           <motion.div
             className="mt-6 flex flex-wrap items-center gap-3"
@@ -83,7 +104,7 @@ export default function Hero() {
               href="/contact"
               className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-lg shadow-halo-gold/40 transition-colors duration-200 hover:bg-halo-gold/90"
             >
-              Start a Catholic project
+              Book a free call
             </Link>
             <Link
               href="/work"
@@ -111,12 +132,9 @@ export default function Hero() {
             Studio at a glance
           </p>
           <div className="saint-sans space-y-2 text-xs">
-            <p>• Independent Catholic brand &amp; web studio.</p>
-            <p>• Website launches, redesigns, branding, and care plans.</p>
-            <p>
-              • Serving Catholic organizations and business owners across the
-              U.S.
-            </p>
+            {glanceItems.map((point) => (
+              <p key={point}>• {point}</p>
+            ))}
           </div>
         </motion.aside>
       </motion.div>
