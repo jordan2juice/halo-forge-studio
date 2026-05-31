@@ -58,10 +58,10 @@ export default function Footer() {
           <p className="saint-sans text-xs text-halo-offwhite/80">
             Email{" "}
             <a
-              href="mailto:jwtoujouse@gmail.com"
+              href="mailto:jordan@haloforgestudio.com"
               className="underline underline-offset-2 hover:text-halo-gold"
             >
-              jwtoujouse@gmail.com
+              jordan@haloforgestudio.com
             </a>{" "}
             to start a project or ask a question.
           </p>
