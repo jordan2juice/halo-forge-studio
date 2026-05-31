@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import { easeInOut, motion } from "motion/react";
-import { LayoutTemplate, Palette, RefreshCw } from "lucide-react";
+import { LayoutTemplate, Palette, RefreshCw, AppWindow } from "lucide-react";
 
 const services = [
   {
@@ -26,6 +26,13 @@ const services = [
       "Logos, colors, and typography designed with reverence and intention. I build a simple, faithful brand system you can use consistently—from your website to print materials.",
     href: "/services#branding",
     Icon: Palette,
+  },
+  {
+    title: "Custom Web Apps & Software",
+    description:
+      "Need more than a website? I build custom CRMs, dashboards, and web applications tailored to how your Catholic organization actually operates — so your team spends less time on admin and more time on mission.",
+    href: "/services#custom-software",
+    Icon: AppWindow,
   },
 ];
 
@@ -67,12 +74,13 @@ export default function ServicesPreview() {
           </h2>
           <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
             Every project begins with a conversation about your goals. From
-            there, I recommend the right level of branding and web support for
-            your parish, ministry, school, or Catholic-owned business.
+            there, I recommend the right level of branding, web, or software
+            support for your parish, ministry, school, or Catholic-owned
+            business.
           </p>
         </motion.div>
 
-        <div className="mt-8 grid gap-3 md:grid-cols-3">
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {services.map(({ Icon, ...service }) => (
             <motion.div
               key={service.title}
@@ -81,7 +89,7 @@ export default function ServicesPreview() {
               whileHover={{
                 y: -6,
                 scale: 1.02,
-                boxShadow: "0 18px 40px rgba(15, 23, 42, 0.18",
+                boxShadow: "0 18px 40px rgba(15, 23, 42, 0.18)",
               }}
               transition={{ type: "spring", stiffness: 260, damping: 22 }}
             >
