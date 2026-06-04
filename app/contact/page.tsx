@@ -7,9 +7,9 @@ import ContactForm from "../components/contact/ContactForm";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Halo Forge Studio – Catholic branding & websites",
+  title: "Start a Project — Catholic Web Design & Branding",
   description:
-    "Contact Halo Forge Studio to start a Catholic branding or website project for your business, parish, ministry, school, or counseling practice.",
+    "Book a free discovery call with Halo Forge Studio. Catholic web design, branding, and custom software for parishes, ministries, schools, and Catholic-owned businesses across the U.S.",
 };
 
 export default function ContactPage() {
@@ -18,7 +18,7 @@ export default function ContactPage() {
       <Navbar />
 
       <main className="mx-auto max-w-3xl space-y-10 px-4 py-16 sm:px-6 lg:px-0">
-        {/* Hero */}
+        {/* Header */}
         <header className="space-y-4">
           <p className="saint-sans text-xs font-semibold uppercase tracking-[0.18em] text-halo-dusk/70">
             Contact
@@ -27,19 +27,19 @@ export default function ContactPage() {
             Start a project or ask a question.
           </h1>
           <p className="saint-sans max-w-2xl text-sm text-halo-dusk/80">
-            Halo Forge partners with Catholic retailers, ministries, and
-            professional practices on thoughtful brand and web design. Share a
-            bit about where you are today and what you hope to build as a
-            Catholic business owner or ministry leader.
+            Halo Forge Studio partners with Catholic retailers, ministries, and
+            professional practices on thoughtful brand, web, and software
+            projects. Share a bit about where you are today and what you hope to
+            build.
           </p>
 
           <p className="saint-sans text-xs text-halo-dusk/70">
             Prefer email? Reach out directly at{" "}
             <a
-              href="mailto:jwtoujouse@gmail.com"
+              href="mailto:hello@haloforgestudio.com" // ← swap to your studio email before going live
               className="underline underline-offset-2 hover:text-halo-teal"
             >
-              jwtoujouse@gmail.com
+              jordan@haloforgestudio.com
             </a>
             .
           </p>
@@ -48,12 +48,12 @@ export default function ContactPage() {
           </p>
         </header>
 
-        {/* Client-side form that uses useSearchParams, wrapped in Suspense */}
+        {/* Client-side form wrapped in Suspense for useSearchParams */}
         <Suspense fallback={null}>
           <ContactForm />
         </Suspense>
 
-        {/* Small note back to services */}
+        {/* Note back to services */}
         <p className="saint-sans text-[11px] text-halo-dusk/70">
           Not sure which option fits? You can{" "}
           <Link

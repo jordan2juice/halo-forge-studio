@@ -7,31 +7,24 @@ import { LayoutTemplate, Palette, RefreshCw, AppWindow } from "lucide-react";
 
 const services = [
   {
-    title: "Brand + Website Launch",
+    title: "Brand Identity",
     description:
-      "Starting from scratch? I create a cohesive Catholic brand and a custom website that clearly communicates your mission, builds trust, and helps visitors take action from day one.",
-    href: "/services#website-launch",
-    Icon: LayoutTemplate,
-  },
-  {
-    title: "Website Refresh & Redesign",
-    description:
-      "If your website feels dated or confusing, I restructure pages, refine the design, and improve clarity—so people can quickly find what they need and engage with confidence.",
-    href: "/services#website-redesign",
-    Icon: RefreshCw,
-  },
-  {
-    title: "Catholic Brand Identity",
-    description:
-      "Logos, colors, and typography designed with reverence and intention. I build a simple, faithful brand system you can use consistently—from your website to print materials.",
+      "Visual identities, messaging, and creative systems designed to communicate trust, clarity, and purpose.",
     href: "/services#branding",
     Icon: Palette,
   },
   {
-    title: "Custom Web Apps & Software",
+    title: "Web Experiences",
     description:
-      "Need more than a website? I build custom CRMs, dashboards, and web applications tailored to how your Catholic organization actually operates — so your team spends less time on admin and more time on mission.",
-    href: "/services#custom-software",
+      "Custom websites crafted to help visitors understand your mission, navigate confidently, and take meaningful action.",
+    href: "/services#websites",
+    Icon: LayoutTemplate,
+  },
+  {
+    title: "Digital Systems",
+    description:
+      "Custom software, CRMs, dashboards, and web applications built around the way your organization actually works.",
+    href: "/services#software",
     Icon: AppWindow,
   },
 ];
@@ -57,7 +50,7 @@ const item = {
 
 export default function ServicesPreview() {
   return (
-    <section className="bg-halo-offwhite py-16">
+    <section className="bg-halo-offwhite py-20">
       <motion.div
         className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8"
         initial="hidden"
@@ -65,50 +58,79 @@ export default function ServicesPreview() {
         viewport={{ once: true, amount: 0.25 }}
         variants={container}
       >
-        <motion.div className="max-w-3xl" variants={item}>
+        {/* Header */}
+        <motion.div className="mx-auto max-w-3xl text-center" variants={item}>
           <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-halo-gold">
-            Studio services
+            What We Forge
           </p>
-          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-teal">
-            Ways this studio supports your mission and work.
+
+          <h2 className="saint-serif mt-3 text-3xl md:text-5xl text-halo-dusk">
+            Brands, websites, and systems crafted to serve your mission.
           </h2>
-          <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
-            Every project begins with a conversation about your goals. From
-            there, I recommend the right level of branding, web, or software
-            support for your parish, ministry, school, or Catholic-owned
-            business.
+
+          <p className="saint-sans mt-5 text-base leading-relaxed text-halo-dusk/70">
+            Whether you're launching something new, refining an established
+            organization, or building custom tools for growth, every project is
+            designed to build trust, communicate clearly, and support long-term
+            impact.
           </p>
         </motion.div>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        {/* Service Cards */}
+        <div className="mt-14 grid gap-6 md:grid-cols-3">
           {services.map(({ Icon, ...service }) => (
             <motion.div
               key={service.title}
-              className="card border border-halo-dusk/10 bg-halo-linen/80 p-6 rounded-3xl"
               variants={item}
               whileHover={{
                 y: -6,
                 scale: 1.02,
-                boxShadow: "0 18px 40px rgba(15, 23, 42, 0.18)",
+                boxShadow: "0 18px 40px rgba(15,23,42,.12)",
               }}
-              transition={{ type: "spring", stiffness: 260, damping: 22 }}
+              transition={{
+                type: "spring",
+                stiffness: 260,
+                damping: 22,
+              }}
+              className="rounded-3xl border border-halo-dusk/10 bg-white p-8"
             >
-              <Icon className="w-5 h-5 text-halo-gold" aria-hidden="true" />
-              <h3 className="saint-serif text-lg font-semibold text-halo-dusk">
+              <div className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-full bg-halo-gold/10">
+                <Icon className="h-5 w-5 text-halo-gold" />
+              </div>
+
+              <h3 className="saint-serif text-2xl text-halo-dusk">
                 {service.title}
               </h3>
-              <p className="saint-sans mt-2 text-sm text-halo-dusk/80">
+
+              <p className="saint-sans mt-4 leading-relaxed text-halo-dusk/70">
                 {service.description}
               </p>
+
               <Link
                 href={service.href}
-                className="saint-sans mt-4 inline-flex text-xs font-semibold uppercase tracking-[.16em] text-halo-dusk/80 underline-offset-4 hover:text-halo-dusk hover:underline"
+                className="saint-sans mt-6 inline-flex text-xs font-semibold uppercase tracking-[0.16em] text-halo-gold hover:opacity-80"
               >
-                View service details
+                Learn More →
               </Link>
             </motion.div>
           ))}
         </div>
+
+        {/* Closing Statement */}
+        <motion.div
+          className="mx-auto mt-16 max-w-3xl text-center"
+          variants={item}
+        >
+          <blockquote className="saint-serif text-2xl italic text-halo-dusk md:text-3xl">
+            Design provides the beauty.
+            <br />
+            Engineering provides the strength.
+          </blockquote>
+
+          <p className="saint-sans mt-4 text-xs uppercase tracking-[0.18em] text-halo-gold">
+            Both exist to serve the mission.
+          </p>
+        </motion.div>
       </motion.div>
     </section>
   );

@@ -54,42 +54,53 @@ export default function AboutPreview() {
             Studio
           </p>
           <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-dusk">
-            A one-person Catholic brand & web studio behind real parish and
-            ministry work.
+            Digital craftsmanship rooted in stewardship, beauty, and purpose.
           </h2>
           <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
-            Halo Forge Studio is my solo Catholic design and web studio.
-            I&apos;m Jordan Toujouse, the designer and front-end developer
-            behind it. I partner with parishes, ministries, retreat centers, and
-            Catholic-owned businesses to create websites and brands that are
-            clear, welcoming, and rooted in their mission — not generic
-            templates or trends.
+            Halo Forge Studio began with a simple belief: Mission-driven
+            organizations deserve better than generic templates and
+            mass-produced digital experiences. I'm Jordan Toujouse, a designer,
+            developer, and craftsman. Whether I'm working with physical
+            materials or building digital systems, I'm drawn to the same
+            principles: precision, intentionality, and stewardship. That's the
+            approach I bring to every project. Not just websites. Not just
+            branding. But digital experiences designed to build trust,
+            communicate clearly, and help meaningful work reach more people.
           </p>
 
           <h3 className="saint-serif mt-6 text-sm font-semibold uppercase tracking-[0.16em] text-base-dark/80">
-            How the studio works
+            What Guides The Work{" "}
           </h3>
           <ul className="saint-sans mt-3 space-y-2 text-sm text-halo-dusk/80">
             <li className="flex items-start gap-2">
               <HeartHandshake className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                Catholic-first: I understand parish life, liturgical seasons,
-                and how real Catholic audiences look for information online.
+                <span className="bg-halo-teal font-semibold">
+                  Craftsmanship First
+                </span>{" "}
+                Every detail matters. From typography and layout to performance
+                and usability, quality is built one decision at a time.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <Sparkles className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                Studio-level craft: Strategy, design, and front-end development
-                handled together so structure, visuals, and code all support the
-                same goals.
+                <span className="bg-halo-teal font-semibold">
+                  Beauty In Service Of Truth
+                </span>{" "}
+                Design should never distract from the mission. Its purpose is to
+                create clarity, trust, and connection.
               </span>
             </li>
             <li className="flex items-start gap-2">
               <Globe2 className="mt-0.5 h-4 w-4 text-halo-gold" />
               <span>
-                Clear process: One point of contact, clear next steps, and a
-                focus on reducing confusion for both staff and visitors.
+                <span className="bg-halo-teal font-semibold">
+                  Built To Endure
+                </span>{" "}
+                Websites and software should remain valuable long after launch.
+                We prioritize maintainability, performance, and long-term
+                growth.
               </span>
             </li>
           </ul>
@@ -99,7 +110,7 @@ export default function AboutPreview() {
               href="/about"
               className="saint-sans inline-flex items-center text-sm font-semibold text-halo-gold underline-offset-4 hover:text-halo-gold/90 hover:underline"
             >
-              Read more about the studio
+              Read the Story Behind Halo Forge{" "}
             </Link>
             <Link
               href="/contact"

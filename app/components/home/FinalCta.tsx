@@ -1,55 +1,59 @@
-// components/home/FinalCta.tsx
 "use client";
 
 import Link from "next/link";
-import { easeInOut, motion } from "motion/react";
-import { PhoneCall } from "lucide-react";
+import { motion } from "motion/react";
+import { Hammer } from "lucide-react";
 
 const container = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.45, ease: easeInOut },
+    transition: { duration: 0.45 },
   },
 };
 
 export default function FinalCta() {
   return (
-    <section className="bg-halo-dusk/5 py-16">
+    <section className="bg-halo-offwhite py-20">
       <motion.div
-        className="mx-auto max-w-3xl rounded-3xl border border-halo-dusk/10 bg-halo-offwhite px-6 py-10 text-center shadow-md drop-shadow-halo-dusk/10 sm:px-10"
+        className="mx-auto max-w-4xl rounded-3xl border border-halo-dusk/10 bg-white px-8 py-14 text-center shadow-lg"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={container}
       >
-        <div className="mx-auto flex h-11 w-11 items-center justify-center rounded-full bg-halo-gold/10">
-          <PhoneCall className="h-5 w-5 text-halo-gold" aria-hidden="true" />
+        {" "}
+        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-halo-gold/10">
+          {" "}
+          <Hammer className="h-6 w-6 text-halo-gold" />{" "}
         </div>
-
-        <h2 className="saint-serif mt-4 text-2xl md:text-3xl font-semibold text-halo-dusk">
-          Ready to bring your Catholic project online?{" "}
-        </h2>
-        <p className="saint-sans mt-3 text-sm md:text-base text-halo-dusk/80">
-          In a 20–30 minute conversation, we&apos;ll clarify your goals,
-          audience, and next steps. No jargon, no pressure—just a clear
-          discussion about how Halo Forge Studio can help your parish, ministry,
-          school, or Catholic-owned business communicate effectively online.
+        ```
+        <p className="saint-sans mt-5 text-xs font-semibold uppercase tracking-[0.22em] text-halo-gold">
+          Start the Conversation
         </p>
-
-        <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+        <h2 className="saint-serif mt-4 text-3xl md:text-5xl text-halo-dusk">
+          Let's build something worthy of the mission.
+        </h2>
+        <p className="saint-sans mx-auto mt-6 max-w-2xl text-base leading-relaxed text-halo-dusk/70">
+          Whether you're launching a new organization, refining an existing
+          brand, or building custom tools to support your growth, Halo Forge
+          Studio combines design, engineering, and craftsmanship to help your
+          work reach the people it is meant to serve.
+        </p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <Link
             href="/contact"
-            className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-7 py-3 text-sm font-semibold text-base-dark shadow-lg shadow-halo-gold/40 uppercase tracking-[0.16em] transition-colors duration-200 hover:bg-halo-gold/85"
+            className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-8 py-3 text-sm font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-lg shadow-halo-gold/30 transition hover:bg-halo-gold/85"
           >
-            Book a call
+            Start a Conversation
           </Link>
+
           <Link
-            href="mailto:hello@haloforgestudio.com"
-            className="saint-sans text-sm font-semibold text-halo-gold underline-offset-4 hover:text-halo-gold/90 hover:underline"
+            href="/work"
+            className="saint-sans text-sm font-semibold text-halo-gold hover:opacity-80"
           >
-            Or email the studio instead
+            View Recent Work
           </Link>
         </div>
       </motion.div>

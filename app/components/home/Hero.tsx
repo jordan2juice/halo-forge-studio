@@ -26,15 +26,27 @@ const item = {
 };
 
 const services = [
-  { label: "Brand Identity" },
-  { label: "Web Design" },
-  { label: "Custom Software" },
+  { label: "Craftmanship" },
+  { label: "Stewardship" },
+  { label: "Engineering" },
 ];
 
 const glanceItems = [
-  "Independent Catholic brand, web & software studio.",
-  "Brands, websites, custom CRMs, and web apps — built together.",
-  "Serving Catholic organizations and business owners across the U.S.",
+  {
+    eyebrow: "Craftsmanship",
+    value: "Crafted, not assembled.",
+    desc: "Every detail serves a purpose—from visual identity to software architecture.",
+  },
+  {
+    eyebrow: "Stewardship",
+    value: "Beauty in service of truth.",
+    desc: "Design should clarify the mission, not distract from it.",
+  },
+  {
+    eyebrow: "Engineering",
+    value: "Built to endure.",
+    desc: "Fast, reliable systems designed for longevity, growth, and trust.",
+  },
 ];
 
 export default function Hero() {
@@ -52,70 +64,159 @@ export default function Hero() {
         <div className="absolute inset-0 bg-linear-to-b from-black/55 via-base-dark/90 to-base-dark/95" />
       </div>
 
+      {/* Warm gold glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-1/2 top-0 z-0 -translate-x-1/2"
+        style={{
+          width: "900px",
+          height: "600px",
+          background:
+            "radial-gradient(ellipse at 50% 0%, rgba(200,168,75,0.07) 0%, transparent 65%)",
+        }}
+      />
+
       <motion.div
-        className="relative z-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 py-20 sm:px-6 lg:flex-row lg:items-center lg:py-24 lg:px-8"
+        className="relative z-10 mx-auto flex max-w-7xl flex-col gap-10 px-4 py-20 sm:px-6 lg:flex-row lg:items-start lg:py-28 lg:px-8"
         initial="hidden"
         animate="visible"
         variants={container}
       >
-        {/* Left: copy */}
-        <motion.div className="max-w-xl" variants={item}>
-          <motion.p
-            className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-halo-gold"
-            variants={item}
-          >
-            Halo Forge Studio · Catholic brand &amp; web studio
-          </motion.p>
+        {/* ── Left: copy ── */}
+        <motion.div className="max-w-xl flex-1" variants={item}>
+          {/* Studio label */}
+          <motion.div className="flex items-center gap-3" variants={item}>
+            <span
+              aria-hidden="true"
+              className="h-px w-6 flex-shrink-0 bg-halo-gold"
+            />
+            <p className="saint-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-halo-gold">
+              Digital Craftsmanship for Mission-Driven Organizations{" "}
+            </p>
+          </motion.div>
 
+          {/* Headline */}
           <motion.h1
-            className="saint-serif mt-3 text-3xl font-semibold text-halo-linen md:text-4xl lg:text-5xl"
+            className="saint-serif mt-6 font-light leading-[1.08] tracking-[-0.01em] text-halo-linen"
+            style={{ fontSize: "clamp(38px, 5.5vw, 64px)" }}
             variants={item}
           >
-            Your mission deserves
-            <span className="block text-halo-teal">more than a template.</span>
+            Crafted for Truth.
+            <span className="block font-light italic text-halo-gold">
+              Built to Endure.
+            </span>
           </motion.h1>
 
-          <motion.p
-            className="saint-sans mt-4 text-sm text-halo-offwhite/80 md:text-base"
+          {/* Ornament */}
+          <motion.div
+            aria-hidden="true"
+            className="mt-6 flex items-center gap-3"
             variants={item}
           >
-            Halo Forge Studio builds brands, websites, and custom software for
-            Catholic organizations — so you can focus on spreading the faith,
-            not fighting your technology.
+            <span className="h-px w-10 shrink-0 bg-halo-gold/50" />
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="shrink-0 text-halo-gold/50"
+            >
+              <line
+                x1="7"
+                y1="0"
+                x2="7"
+                y2="14"
+                stroke="currentColor"
+                strokeWidth="0.75"
+              />
+              <line
+                x1="0"
+                y1="7"
+                x2="14"
+                y2="7"
+                stroke="currentColor"
+                strokeWidth="0.75"
+              />
+              <circle
+                cx="7"
+                cy="7"
+                r="2"
+                stroke="currentColor"
+                strokeWidth="0.5"
+              />
+            </svg>
+            <span className="h-px w-10 shrink-0 bg-halo-gold/50" />
+          </motion.div>
+
+          {/* Body */}
+          <motion.p
+            className="saint-sans mt-6 text-sm font-light leading-[1.85] text-halo-offwhite/75 md:text-[15px]"
+            variants={item}
+          >
+            Handcrafted brands, websites, and software for mission-driven
+            businesses.
+          </motion.p>
+          <motion.p
+            className="saint-sans mt-6 text-sm font-light leading-[1.85] text-halo-offwhite/75 md:text-[15px]"
+            variants={item}
+          >
+            Halo Forge Studio combines the care of an artisan with the precision
+            of an engineer—helping Catholic organizations, ministries, and
+            business owners build trust, communicate clearly, and grow their
+            impact through thoughtful digital experiences.
           </motion.p>
 
           {/* Service pills */}
-          <motion.div className="mt-5 flex flex-wrap gap-2" variants={item}>
+          <motion.div className="mt-6 flex flex-wrap gap-2" variants={item}>
             {services.map((s) => (
               <span
                 key={s.label}
-                className="saint-sans inline-block rounded-full border border-halo-linen/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-halo-offwhite/70"
+                className="saint-sans inline-block rounded-full border border-halo-linen/20 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-halo-offwhite/60"
               >
                 {s.label}
               </span>
             ))}
           </motion.div>
 
+          {/* CTAs */}
           <motion.div
-            className="mt-6 flex flex-wrap items-center gap-3"
+            className="mt-7 flex flex-wrap items-center gap-4"
             variants={item}
           >
             <Link
               href="/contact"
-              className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-6 py-3 text-xs font-semibold uppercase tracking-[0.16em] text-halo-dusk shadow-lg shadow-halo-gold/40 transition-colors duration-200 hover:bg-halo-gold/90"
+              className="saint-sans inline-flex items-center rounded-full bg-halo-gold px-6 py-3 text-xs font-bold uppercase tracking-[0.16em] text-halo-dusk shadow-lg shadow-halo-gold/30 transition-colors duration-200 hover:bg-halo-gold/85"
             >
-              Book a free call
+              Forge Your Project
             </Link>
             <Link
               href="/work"
-              className="saint-sans text-sm font-semibold text-halo-linen hover:text-halo-gold uppercase hover:underline-offset-4 hover:underline"
+              className="saint-sans group inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.12em] text-halo-linen/70 transition hover:text-halo-linen"
             >
               View our work
+              <span className="inline-block transition-transform group-hover:translate-x-0.5">
+                →
+              </span>
             </Link>
           </motion.div>
 
+          {/* Conviction pull-quote */}
+          <motion.blockquote
+            className="mt-9 border-l border-halo-gold/40 pl-4"
+            variants={item}
+          >
+            <p className="saint-serif text-sm font-light italic leading-[1.8] text-halo-offwhite/45 md:text-[15px]">
+              Design provides the beauty.
+              <br />
+              Engineering provides the strength. <br />
+              Both exist to serve the mission.
+            </p>
+          </motion.blockquote>
+
+          {/* Fit note */}
           <motion.p
-            className="saint-sans text-xs text-halo-offwhite/65 mt-5 md:text-sm"
+            className="saint-sans mt-6 text-xs font-light text-halo-offwhite/40"
             variants={item}
           >
             Best fit for parishes, ministries, schools, and Catholic-owned
@@ -123,18 +224,38 @@ export default function Hero() {
           </motion.p>
         </motion.div>
 
-        {/* Right: studio snapshot */}
+        {/* ── Right: conviction panel ── */}
         <motion.aside
-          className="mt-6 flex flex-col gap-4 rounded-2xl border border-halo-linen/15 bg-halo-linen/5 p-4 text-sm text-halo-offwhite/80 backdrop-blur-sm lg:mt-0 lg:w-80"
+          className="flex flex-col rounded-2xl border border-halo-linen/10 bg-halo-linen/5 backdrop-blur-sm lg:mt-2 lg:w-80"
           variants={item}
         >
-          <p className="saint-serif text-sm font-semibold text-halo-linen">
-            Studio at a glance
-          </p>
-          <div className="saint-sans space-y-2 text-xs">
-            {glanceItems.map((point) => (
-              <p key={point}>• {point}</p>
+          <div className="border-b border-halo-linen/10 px-5 py-4">
+            <p className="saint-serif text-sm font-normal text-halo-linen/90">
+              Studio at a glance
+            </p>
+          </div>
+
+          <div className="divide-y divide-halo-linen/10">
+            {glanceItems.map((g) => (
+              <div key={g.eyebrow} className="space-y-1 px-5 py-4">
+                <p className="saint-sans text-[9px] font-bold uppercase tracking-[0.2em] text-halo-gold">
+                  {g.eyebrow}
+                </p>
+                <p className="saint-serif text-base font-normal leading-snug text-halo-linen/90">
+                  {g.value}
+                </p>
+                <p className="saint-sans text-[11px] font-light leading-relaxed text-halo-offwhite/50">
+                  {g.desc}
+                </p>
+              </div>
             ))}
+          </div>
+
+          <div className="border-t border-halo-linen/10 px-5 py-3">
+            <p className="saint-sans text-[10px] font-light tracking-[0.06em] text-halo-offwhite/35">
+              Serving parishes, ministries, schools, and Catholic-owned
+              businesses across the U.S.
+            </p>
           </div>
         </motion.aside>
       </motion.div>

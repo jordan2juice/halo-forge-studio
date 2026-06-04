@@ -4,15 +4,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { easeInOut, motion } from "motion/react";
-import { Church, GraduationCap, Coffee } from "lucide-react";
+import { Church, ShoppingBag, Landmark } from "lucide-react";
 
 const projects = [
   {
     label: "Catholic parish · Case study",
-    name: "St. Gabriel Catholic Parish",
+    name: "Modern Parish Website Concept",
     result: "Clearer navigation and fewer repeat questions",
     description:
-      "A redesigned parish website that makes Mass times, sacraments, events, and contact information easy to find—helping parishioners and newcomers take their next step with confidence.",
+      "A redesigned parish website that makes Mass times, sacraments, events, and contact information easy to find — helping parishioners and newcomers take their next step with confidence.",
     href: "/work/st-gabriel-parish",
     imageSrc: "/images/case-studies/st-gabriel/stg-desktop.png",
     imageAlt:
@@ -21,15 +21,15 @@ const projects = [
   },
   {
     label: "Catholic retail · Case study",
-    name: "Little Crown Rosaries",
-    result: "Stronger brand clarity and smoother online sales",
+    name: "The Lumonous Rosary",
+    result: "Clearer navigation and fewer repeat questions",
     description:
       "A handcrafted Catholic brand and ecommerce experience that helps customers understand what makes each rosary distinct and purchase with confidence.",
     href: "/work/little-crown-rosaries",
     imageSrc: "/images/case-studies/little-crown/lcr-shop.png",
     imageAlt:
       "Little Crown Rosaries ecommerce website designed by Halo Forge Studio",
-    Icon: Coffee,
+    Icon: ShoppingBag,
   },
   {
     label: "Catholic ministry · Case study",
@@ -42,6 +42,17 @@ const projects = [
     imageAlt:
       "Emmaus Outreach Ministry website homepage designed by Halo Forge Studio",
     Icon: Church,
+  },
+  {
+    label: "Catholic financial services · Case study",
+    name: "Covenant Wealth Advisors",
+    result: "A trusted brand that reflects faithful stewardship",
+    description:
+      "A full brand identity and website for a Catholic financial advisory firm — built to communicate integrity, faith, and professional excellence to the clients they serve.",
+    href: "/work/covenant-wealth-advisors",
+    imageSrc: "/images/case-studies/covenant-wealth/cwa-desktop.png",
+    imageAlt: "Covenant Wealth Advisors website designed by Halo Forge Studio",
+    Icon: Landmark,
   },
 ];
 
@@ -74,21 +85,23 @@ export default function WorkPreview() {
         viewport={{ once: true, amount: 0.25 }}
         variants={container}
       >
+        {/* Section header */}
         <motion.div className="max-w-3xl" variants={item}>
           <p className="saint-sans text-xs font-semibold uppercase tracking-[0.2em] text-halo-gold">
-            Selected studio work
+            Forged Projects
           </p>
-          <h2 className="saint-serif mt-3 text-2xl md:text-3xl font-semibold text-halo-offwhite">
-            Recent Catholic projects from Halo Forge Studio.
+          <h2 className="saint-serif mt-3 text-2xl font-semibold text-halo-offwhite md:text-3xl">
+            Digital craftsmanship in practice.{" "}
           </h2>
-          <p className="saint-sans mt-3 text-sm md:text-base text-halo-offwhite/80">
-            A snapshot of how this one‑person Catholic brand &amp; web studio
-            supports parishes, ministries, schools, and Catholic‑owned
-            businesses with design and code that serve real people.
+          <p className="saint-sans mt-3 text-sm text-halo-offwhite/80 md:text-base">
+            A selection of brands, websites, and digital experiences designed to
+            help mission-driven organizations communicate with clarity, build
+            trust, and grow their impact.
           </p>
         </motion.div>
 
-        <div className="mt-8 grid gap-6 md:grid-cols-3">
+        {/* Project grid */}
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map(({ Icon, ...project }) => (
             <motion.article
               key={project.name}
@@ -128,7 +141,7 @@ export default function WorkPreview() {
                 <p className="saint-sans mt-2 text-sm text-halo-linen/80">
                   {project.description}
                 </p>
-                <div className="mt-4">
+                <div className="mt-auto pt-4">
                   <Link
                     href={project.href}
                     className="saint-sans inline-flex text-xs font-semibold uppercase tracking-[0.16em] text-halo-gold underline-offset-4 hover:text-halo-gold/90 hover:underline"
@@ -141,10 +154,11 @@ export default function WorkPreview() {
           ))}
         </div>
 
+        {/* Footer link */}
         <motion.div className="mt-10" variants={item}>
           <Link
             href="/work"
-            className="saint-sans inline-flex items-center text-sm font-semibold text-halo-gold underline-offset-4 hover:text-halo-gold/90 hover:underline"
+            className="saint-sans inline-flex items-center gap-1.5 text-sm font-semibold text-halo-gold underline-offset-4 hover:text-halo-gold/90 hover:underline"
           >
             View all studio projects
           </Link>
