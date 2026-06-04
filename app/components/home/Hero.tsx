@@ -88,7 +88,7 @@ export default function Hero() {
           <motion.div className="flex items-center gap-3" variants={item}>
             <span
               aria-hidden="true"
-              className="h-px w-6 flex-shrink-0 bg-halo-gold"
+              className="h-px w-6 shrink-0 bg-halo-gold"
             />
             <p className="saint-sans text-[10px] font-semibold uppercase tracking-[0.22em] text-halo-gold">
               Digital Craftsmanship for Mission-Driven Organizations{" "}
